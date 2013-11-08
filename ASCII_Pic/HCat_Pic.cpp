@@ -25,10 +25,10 @@ void HCat_Pic::display( ostream& os, int row, int wd ) const {
     pad( os, width(), wd );
 }
 
-Picture HCat_Pic::refram( char c, char s, char t ) {
+Picture HCat_Pic::reframe( char c, char s, char t ) {
     return new HCat_Pic(
-                        reframe( _left, c, s, t ),
-                        reframe( _right, c, s, t) );
+                        ::reframe( _left, c, s, t ),
+                        ::reframe( _right, c, s, t) );
 }
 
 Picture* HCat_Pic::getPic() { return &_left; }

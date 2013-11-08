@@ -46,8 +46,8 @@ void Frame_Pic::display(ostream& os, int row, int wd) const{
     }
 }
 
-Picture Frame_Pic::refram(char c, char s, char t ){
-    return new Frame_Pic( reframe(_pic, c, s, t), c, s, t);
+Picture Frame_Pic::reframe(char c, char s, char t ){
+    return new Frame_Pic( ::reframe(_pic, c, s, t), c, s, t);
 }
 
 Picture* Frame_Pic::getPic(){

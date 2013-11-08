@@ -21,7 +21,7 @@ private:
     int height() const;
     int width() const;
     void display( ostream& os, int row, int wd ) const;
-    Picture refram( char c, char s, char t);
+    Picture reframe( char c, char s, char t);
     
     friend Picture operator|(const Picture& left, const Picture& right );
     
