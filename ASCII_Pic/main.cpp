@@ -9,6 +9,8 @@
 #include <iostream>
 #include "Picture.h"
 #include <iostream>
+#include <unistd.h>
+
 using namespace std;
 
 const char* init[] = { "Paris", "in the", "Spring" };
