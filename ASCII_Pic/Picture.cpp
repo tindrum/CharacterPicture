@@ -18,7 +18,7 @@ Picture::Picture(P_Node* pnode) : _pnode(pnode){
     pnode->_use++;
 }
 
-Picture::Picture(const char* const * pLines, int nLines) : _pnode(new String_Pic(pLines, nLines)){
+Picture::Picture(const char* const * pLines, int nLines) : _pnode( new String_Pic(pLines, nLines)){
     
 }
 

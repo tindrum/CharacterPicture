@@ -14,11 +14,11 @@
 using namespace std;
 
 #include "P_Node.h"
-#include "Picture.h"
+// #include "Picture.h"
 
 class String_Pic : public P_Node {
 private:
-    friend Picture  frame( const Picture& picture );
+    friend class Picture;
     
     String_Pic( const char* const* pLines, int nLines );
     ~String_Pic();

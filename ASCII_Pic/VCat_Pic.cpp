@@ -29,10 +29,10 @@ void VCat_Pic::display( ostream& os, int row, int wd) const {
     }
 }
 
-Picture VCat_Pic::refram( char c, char s, char t ) {
+Picture VCat_Pic::reframe( char c, char s, char t ) {
     return new VCat_Pic(
-                        reframe( _top, c, s, t ),
-                        reframe( _bottom, c, s, t ) );
+                        ::reframe( _top, c, s, t ),
+                        ::reframe( _bottom, c, s, t ) );
 }
 
 Picture* VCat_Pic::getPic() {  return &_top; }

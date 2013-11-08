@@ -9,7 +9,7 @@
 #include "String_Pic.h"
 #include "Picture.h"
 
-String_Pic::String_Pic(const char* const *pLines, int nLines) : P_Node(), _data(new char* [nLines]), _size(Nlines){
+String_Pic::String_Pic(const char* const *pLines, int nLines) : P_Node(), _data(new char* [nLines]), _size(nLines){
     for(int i = 0; i < nLines; i++){
         _data[i] = new char[strlen(pLines[i]) + 1];
         strcpy(_data[i], pLines[i]);

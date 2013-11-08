@@ -26,7 +26,7 @@ public:
     
     friend ostream& operator<<(ostream& os, const Picture& pic);
     friend Picture frame(const Picture& pic);
-    friend Picture reframe(const Picture&, char, char,char);
+    friend Picture reframe(const Picture&, char, char, char);
     friend Picture operator&(const Picture& top, const Picture& bottom);
     friend Picture operator|(const Picture& left, const Picture& right);
     
