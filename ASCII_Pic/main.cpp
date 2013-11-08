@@ -2,8 +2,8 @@
 //  main.cpp
 //  ASCII_Pic
 //
-//  Created by Daniel Henderson on 11/7/13.
-//  Copyright (c) 2013 Daniel Henderson. All rights reserved.
+//  By Daniel Henderson and Josh Maguregui
+//  11/7/13.
 //
 
 #include <iostream>

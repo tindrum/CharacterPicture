@@ -2,8 +2,8 @@
 //  VCat_Pic.h
 //  Frame
 //
-//  Created by D. Henderson on 11/7/13.
-//  Copyright (c) 2013 D Henderson. All rights reserved.
+//  By Daniel Henderson and Josh Maguregui
+//  11/7/13.
 //
 
 #ifndef __ASCII_Pic__VCat_Pic__
