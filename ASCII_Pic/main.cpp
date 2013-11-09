@@ -8,6 +8,9 @@
 
 #include <iostream>
 #include "Picture.h"
+#include "VCat_Pic.h"
+#include "HCat_Pic.h"
+
 #include <iostream>
 using namespace std;
 
@@ -52,6 +55,8 @@ int main(int argc, const char * argv[])
     cout << f_ftblr_paris << endl;
     
     cout << "...done." << endl;
+
+    cout << "... your never done!" << endl;
     
     return 0;
 }

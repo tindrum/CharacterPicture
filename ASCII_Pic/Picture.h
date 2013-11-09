@@ -14,6 +14,11 @@ using namespace std;
 
 class P_Node;
 
+class Picture;
+
+Picture frame(const Picture& pic);
+Picture reframe(const Picture&, char, char, char);
+
 class Picture{
 public:
     Picture();

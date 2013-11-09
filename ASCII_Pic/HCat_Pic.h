@@ -15,6 +15,8 @@ using namespace std;
 #include "P_Node.h"
 #include "Picture.h"
 
+Picture operator|( const Picture& left, const Picture& right );
+
 class HCat_Pic : public P_Node {
 private:
     HCat_Pic( const Picture& left, const Picture& right );
