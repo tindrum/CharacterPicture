@@ -27,6 +27,9 @@
 #include <iostream>
 #include <ctype.h>
 #include "Picture.h"
+#include "VCat_Pic.h"
+#include "HCat_Pic.h"
+
 #include <iostream>
 #include <unistd.h>
 
