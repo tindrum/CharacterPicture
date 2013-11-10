@@ -14,6 +14,8 @@
 #include "Picture.h"
 using namespace std;
 
+Picture operator&(const Picture& top, const Picture& bottom);
+
 class VCat_Pic : public P_Node{
 private:
     VCat_Pic(const Picture& top, const Picture& bottom);

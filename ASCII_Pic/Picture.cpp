@@ -12,6 +12,21 @@
 #include "Frame_Pic.h"
 #include "P_Node.h"
 #include <iostream>
+#include <regex>
+#include <regex.h>
+#include <algorithm>
+#include <stdio.h>
+#include <string.h>
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+#include <algorithm>
+#include <regex>
+
+
+
 using namespace std;
 
 Picture::Picture(P_Node* pnode) : _pnode(pnode){
@@ -21,6 +36,50 @@ Picture::Picture(P_Node* pnode) : _pnode(pnode){
 Picture::Picture(const char* const * pLines, int nLines) : _pnode( new String_Pic(pLines, nLines)){
     
 }
+
+Picture::Picture ( char* phrase ) {
+    char* pch;
+    int dashCount = 0;
+    for (int j = 0; j < strlen(phrase); j++){
+        if (phrase[j] == '-' ) {
+            dashCount++;
+        }
+
+    }
+
+
+//
+//    http://www.cplusplus.com/reference/cstring/strtok/
+//    {
+//        char str[] ="- This, a sample string.";
+//        char * pch;
+//        printf ("Splitting string \"%s\" into tokens:\n",str);
+//        pch = strtok (str," ,.-");
+//        while (pch != NULL)
+//        {
+//            printf ("%s\n",pch);
+//            pch = strtok (NULL, " ,.-");
+//        }
+//        return 0;
+//    }
+//
+    char* sap[6];
+    const char* test[] = {"Why", "Doesn't", "This", "Work?"};
+    pch = strtok(phrase, "-");
+    int c = 0;
+    while (pch != NULL)
+    {
+        sap[c++] = pch;
+        pch = strtok(NULL, "-");
+    }
+
+    _pnode = ( new String_Pic(sap, dashCount)) ;
+
+}
+
+
+
+
 
 Picture::Picture(const Picture& other) : _pnode(other._pnode){
     other._pnode->_use++;
@@ -81,3 +140,5 @@ void Picture::showDebug() const{
     }
     cout << "]" << endl;
 }
+
+
