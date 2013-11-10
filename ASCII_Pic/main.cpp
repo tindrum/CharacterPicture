@@ -97,47 +97,74 @@ int main(int argc, char * argv[])
     }
     
     
-    
-    
-    
+/*      // Example of dynamic string
+    int mylen = strlen(argv[0]);
+    char * astring = char[100]; // This will go out of scope later.. if it's in a function.
+    char * dynamicString = new char[mylen+1];
+
+    strcpy(dynamicString,argv[0]);
+    cout << "This is my new string " << dynamicString << endl; 
+*/
+
     
     
     //  end getopt section
-    
-    const Picture&  pic = Picture ( init, 3);
-    const Picture& fpic = frame( pic );
-    
-    Picture rke(knkv, 6);
-    const Picture&  frke = frame( rke );
-    
-    Picture qjd( joju, 4);
-    const Picture&  fqjd = frame ( qjd );
-    
-    cout << fpic << endl;
-    const Picture&  re_fpic = reframe( fpic, 'o', '!', '~' );
-    cout << re_fpic << endl;
-    
-    cout << fqjd << endl;
-    const Picture& re_fqjd = reframe( fqjd, '$', '@', '=');
-    cout << re_fqjd << endl;
-    
-    cout << frke << endl;
-    
-    const Picture&  left_right = re_fpic | re_fqjd;
-    
-    const Picture&  top_bottom = frke & re_fqjd;
-    cout << top_bottom << endl;
-    
-    const Picture& tblr = top_bottom | left_right;
-    cout << tblr << endl;
-    
-    const Picture& ftblr = frame( tblr );
-    cout << ftblr << endl;
-    
-    const Picture&  ftblr_paris = ftblr & re_fpic;
-    const Picture& f_ftblr_paris = frame( ftblr_paris );
-    cout << f_ftblr_paris << endl;
-    
+
+
+
+    //  Verbatim text from class assignment
+    if (svalue || fvalue ) {
+        if (svalue ) {      // passed a string on the command line
+            const Picture &ed = Picture( svalue );
+            cout << ed;
+            const Picture &fed = frame(ed);
+            cout << fed;
+            const Picture &hfed = ed | fed;
+            cout << hfed;
+        }   else {
+            // passed a file
+        }
+    }
+        else
+    {
+        const Picture &pic = Picture(init, 3);
+        const Picture &fpic = frame(pic);
+
+        Picture rke(knkv, 6);
+        const Picture &frke = frame(rke);
+
+        Picture qjd(joju, 4);
+        const Picture &fqjd = frame(qjd);
+
+        cout << fpic << endl;
+        const Picture &re_fpic = reframe(fpic, 'o', '!', '~');
+        cout << re_fpic << endl;
+
+        cout << fqjd << endl;
+        const Picture &re_fqjd = reframe(fqjd, '$', '@', '=');
+        cout << re_fqjd << endl;
+
+        cout << frke << endl;
+
+        const Picture &left_right = re_fpic | re_fqjd;
+
+        const Picture &top_bottom = frke & re_fqjd;
+        cout << top_bottom << endl;
+
+        const Picture &tblr = top_bottom | left_right;
+        cout << tblr << endl;
+
+        const Picture &ftblr = frame(tblr);
+        cout << ftblr << endl;
+
+        const Picture &ftblr_paris = ftblr & re_fpic;
+        const Picture &f_ftblr_paris = frame(ftblr_paris);
+        cout << f_ftblr_paris << endl;
+
+    }
+    // end verbatim text from class assignment
+
+
     cout << "...done." << endl;
     
     return 0;

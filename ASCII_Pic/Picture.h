@@ -23,8 +23,9 @@ class Picture{
 public:
     Picture();
     Picture(const char* const *pLines, int nLines);
+    Picture( char* phrase );
     
-    Picture(const Picture& other);
+    Picture(const Picture& other);   // copy constructor
     Picture& operator=(const Picture& other);
     
     ~Picture();
@@ -46,8 +47,10 @@ private:
     int height() const;
     int width() const;
     void display(ostream& os, int x, int y) const;
-    
-public:
+
+
+
+        public:
     void showDebug() const;
 private:
     P_Node* _pnode;
