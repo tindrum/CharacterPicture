@@ -63,8 +63,10 @@ Picture::Picture ( char* phrase ) {
 //        return 0;
 //    }
 //
-    char* sap[6];
-    const char* test[] = {"Why", "Doesn't", "This", "Work?"};
+
+    // TODO: fix that it needs a newline at the end of every line
+    //       this might be the way strtok works, though
+    char** sap = new char*[dashCount];
     pch = strtok(phrase, "-");
     int c = 0;
     while (pch != NULL)
@@ -74,7 +76,8 @@ Picture::Picture ( char* phrase ) {
     }
 
     _pnode = ( new String_Pic(sap, dashCount)) ;
-
+    
+    delete sap;
 }
 
 
