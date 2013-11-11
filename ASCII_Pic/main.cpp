@@ -9,9 +9,13 @@
 //  Command line arguments:
 //  [optional] -h <height>       height of text window ( default value: number of lines in input text )
 //  [optional] -w <width>        width of text window  ( default value: twelve or so )
-//  [optional] -s <string>       quoted text string with embedded newlines
+//  [optional] -s <string>       quoted text string with dashes for each desired newline
+//                               Each desired line must end with a dash:
+//                               "Print each-line followed-by a-dash or the-last line-won't show up-"
+//                               Notice the final dash.
 //                                                     ( if not given, defaults to built-in text strings,
 //                                                       if -s switch is used, string must be provided    )
+//  TODO: implement file reading
 //  [optional] -f <file>         file name to use. If used, file name must be given.
 //                                                     ( postfix parsing of single-char operators
 //                                                       and B[xxxx] special bordering lines in file
