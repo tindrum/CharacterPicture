@@ -10,6 +10,8 @@
 #define __ASCII_Pic__Picture__
 
 #include <iostream>
+#include "VisualItem.h"
+
 using namespace std;
 
 class P_Node;
@@ -19,7 +21,7 @@ class Picture;
 Picture frame(const Picture& pic);
 Picture reframe(const Picture&, char, char, char);
 
-class Picture{
+class Picture : public VisualItem {
 public:
     Picture();
     Picture(const char* const *pLines, int nLines);
@@ -35,6 +37,8 @@ public:
     friend Picture reframe(const Picture&, char, char, char);
     friend Picture operator&(const Picture& top, const Picture& bottom);
     friend Picture operator|(const Picture& left, const Picture& right);
+
+    void draw();
     
 private:
     Picture(P_Node* pnode);
@@ -50,7 +54,7 @@ private:
 
 
 
-        public:
+public:
     void showDebug() const;
 private:
     P_Node* _pnode;
