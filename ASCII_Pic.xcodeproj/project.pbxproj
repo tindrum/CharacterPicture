@@ -15,6 +15,15 @@
 		9DEB08C4182C778D00C792EA /* HCat_Pic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB08C2182C778D00C792EA /* HCat_Pic.cpp */; };
 		9DEB08C7182C779C00C792EA /* Frame_Pic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB08C5182C779C00C792EA /* Frame_Pic.cpp */; };
 		9DEB08CA182C77A200C792EA /* String_Pic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB08C8182C77A200C792EA /* String_Pic.cpp */; };
+		B1BCF368E03E1C20A1E873BB /* BorderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCFC94075A809878D129DE /* BorderDecorator.cpp */; };
+		B1BCF38D8D5155BAAB5236AF /* User_Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCF5C4885A459F97F434D4 /* User_Event.cpp */; };
+		B1BCF3E7BA146AF27B4991E2 /* EventListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCFC04D70840EA61392F01 /* EventListener.cpp */; };
+		B1BCF677D0997629D98D4BE0 /* VScrollBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCF9C5AC86AF1EAB6D6BF9 /* VScrollBar.cpp */; };
+		B1BCF6E8B2B17059DBAD52EA /* VisualItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCF2BFB80AACF0784C92B9 /* VisualItem.cpp */; };
+		B1BCF7C5581B148471F3C7F5 /* Scrollbar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCFF8EC853776D3628B3F3 /* Scrollbar.cpp */; };
+		B1BCF96874BAEA12555A4214 /* EventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCFBE9FC380D27A6A918B3 /* EventManager.cpp */; };
+		B1BCFE5A5E02C3E0CC0C52B4 /* HScrollbar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCFFFFF196F138A2B1E719 /* HScrollbar.cpp */; };
+		B1BCFE5A89519612D3733481 /* SingleBorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCF333EAEC22BAB0CD32A4 /* SingleBorder.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +55,24 @@
 		9DEB08C6182C779C00C792EA /* Frame_Pic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frame_Pic.h; sourceTree = "<group>"; };
 		9DEB08C8182C77A200C792EA /* String_Pic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = String_Pic.cpp; sourceTree = "<group>"; };
 		9DEB08C9182C77A200C792EA /* String_Pic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = String_Pic.h; sourceTree = "<group>"; };
+		B1BCF2BFB80AACF0784C92B9 /* VisualItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualItem.cpp; sourceTree = "<group>"; };
+		B1BCF333EAEC22BAB0CD32A4 /* SingleBorder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SingleBorder.cpp; sourceTree = "<group>"; };
+		B1BCF4331806928BAACA40CD /* VScrollBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VScrollBar.h; sourceTree = "<group>"; };
+		B1BCF46C09A9873B52F8D56E /* HScrollbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HScrollbar.h; sourceTree = "<group>"; };
+		B1BCF55E779C8E3E72B5E581 /* EventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListener.h; sourceTree = "<group>"; };
+		B1BCF5C4885A459F97F434D4 /* User_Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = User_Event.cpp; path = ASCII_Pic/User_Event.cpp; sourceTree = "<group>"; };
+		B1BCF5DB9D29E4F23C25A8A4 /* SingleBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleBorder.h; sourceTree = "<group>"; };
+		B1BCF6E3415058F07BDC671C /* Scrollbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scrollbar.h; sourceTree = "<group>"; };
+		B1BCF88B878833180404679D /* VisualItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualItem.h; sourceTree = "<group>"; };
+		B1BCF9C5AC86AF1EAB6D6BF9 /* VScrollBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VScrollBar.cpp; sourceTree = "<group>"; };
+		B1BCFB333769C6C55A4638FD /* BorderDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderDecorator.h; sourceTree = "<group>"; };
+		B1BCFBE9FC380D27A6A918B3 /* EventManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventManager.cpp; sourceTree = "<group>"; };
+		B1BCFBF9BB90AD21BCDAF5DB /* User_Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User_Event.h; path = ASCII_Pic/User_Event.h; sourceTree = "<group>"; };
+		B1BCFC04D70840EA61392F01 /* EventListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventListener.cpp; sourceTree = "<group>"; };
+		B1BCFC94075A809878D129DE /* BorderDecorator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BorderDecorator.cpp; sourceTree = "<group>"; };
+		B1BCFCCFC25AC690FE61C03E /* EventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventManager.h; sourceTree = "<group>"; };
+		B1BCFF8EC853776D3628B3F3 /* Scrollbar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scrollbar.cpp; sourceTree = "<group>"; };
+		B1BCFFFFF196F138A2B1E719 /* HScrollbar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HScrollbar.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +91,11 @@
 			children = (
 				9DEB08AF182C75FE00C792EA /* ASCII_Pic */,
 				9DEB08AE182C75FE00C792EA /* Products */,
+				B1BCF24C83F14606ECD47614 /* Character */,
+				B1BCF49D5C44AED009846EE6 /* Decorators */,
+				B1BCF00674630437B86689B2 /* EventManager */,
+				B1BCF5C4885A459F97F434D4 /* User_Event.cpp */,
+				B1BCFBF9BB90AD21BCDAF5DB /* User_Event.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +126,46 @@
 				9DEB08C9182C77A200C792EA /* String_Pic.h */,
 			);
 			path = ASCII_Pic;
+			sourceTree = "<group>";
+		};
+		B1BCF00674630437B86689B2 /* EventManager */ = {
+			isa = PBXGroup;
+			children = (
+				B1BCFCCFC25AC690FE61C03E /* EventManager.h */,
+				B1BCF55E779C8E3E72B5E581 /* EventListener.h */,
+				B1BCFBE9FC380D27A6A918B3 /* EventManager.cpp */,
+				B1BCFC04D70840EA61392F01 /* EventListener.cpp */,
+			);
+			name = EventManager;
+			path = ASCII_Pic/EventManager;
+			sourceTree = "<group>";
+		};
+		B1BCF24C83F14606ECD47614 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				B1BCF88B878833180404679D /* VisualItem.h */,
+				B1BCF2BFB80AACF0784C92B9 /* VisualItem.cpp */,
+			);
+			name = Character;
+			path = ASCII_Pic/Character;
+			sourceTree = "<group>";
+		};
+		B1BCF49D5C44AED009846EE6 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				B1BCF6E3415058F07BDC671C /* Scrollbar.h */,
+				B1BCF46C09A9873B52F8D56E /* HScrollbar.h */,
+				B1BCF4331806928BAACA40CD /* VScrollBar.h */,
+				B1BCFF8EC853776D3628B3F3 /* Scrollbar.cpp */,
+				B1BCFFFFF196F138A2B1E719 /* HScrollbar.cpp */,
+				B1BCF5DB9D29E4F23C25A8A4 /* SingleBorder.h */,
+				B1BCF9C5AC86AF1EAB6D6BF9 /* VScrollBar.cpp */,
+				B1BCF333EAEC22BAB0CD32A4 /* SingleBorder.cpp */,
+				B1BCFB333769C6C55A4638FD /* BorderDecorator.h */,
+				B1BCFC94075A809878D129DE /* BorderDecorator.cpp */,
+			);
+			name = Decorators;
+			path = ASCII_Pic/Decorators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +226,15 @@
 				9DEB08C1182C778600C792EA /* VCat_Pic.cpp in Sources */,
 				9DEB08C7182C779C00C792EA /* Frame_Pic.cpp in Sources */,
 				9DEB08B1182C75FE00C792EA /* main.cpp in Sources */,
+				B1BCF6E8B2B17059DBAD52EA /* VisualItem.cpp in Sources */,
+				B1BCF7C5581B148471F3C7F5 /* Scrollbar.cpp in Sources */,
+				B1BCFE5A5E02C3E0CC0C52B4 /* HScrollbar.cpp in Sources */,
+				B1BCF677D0997629D98D4BE0 /* VScrollBar.cpp in Sources */,
+				B1BCFE5A89519612D3733481 /* SingleBorder.cpp in Sources */,
+				B1BCF368E03E1C20A1E873BB /* BorderDecorator.cpp in Sources */,
+				B1BCF96874BAEA12555A4214 /* EventManager.cpp in Sources */,
+				B1BCF3E7BA146AF27B4991E2 /* EventListener.cpp in Sources */,
+				B1BCF38D8D5155BAAB5236AF /* User_Event.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
