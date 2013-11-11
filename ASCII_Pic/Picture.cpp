@@ -145,3 +145,6 @@ void Picture::showDebug() const{
 }
 
 
+void Picture::draw() {
+
+}

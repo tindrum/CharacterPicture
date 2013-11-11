@@ -8,13 +8,15 @@
 #include <sys/_types.h>
 #include "EventManager.h"
 
+EventManager* EventManager::_pManager = NULL;
+
 EventManager *EventManager::getManager() {
 
-    if (_pManager == NULL) {
-        _pManager = new EventManager();
+    if (EventManager::_pManager == NULL) {
+        EventManager::_pManager = new EventManager();
     }
 
-    return _pManager;
+    return EventManager::_pManager;
 }
 
 void EventManager::registerForEvent(int event, EventListener *pL) {

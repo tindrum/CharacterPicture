@@ -23,8 +23,8 @@ private:
     ~EventManager();
 
     EventListener* pListeners[8];
-
     static EventManager* _pManager;
+
 };
 
 

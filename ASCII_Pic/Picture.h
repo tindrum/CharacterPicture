@@ -38,7 +38,7 @@ public:
     friend Picture operator&(const Picture& top, const Picture& bottom);
     friend Picture operator|(const Picture& left, const Picture& right);
 
-    void draw();
+    virtual void draw();
     
 private:
     Picture(P_Node* pnode);

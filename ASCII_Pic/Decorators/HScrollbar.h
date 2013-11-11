@@ -7,6 +7,7 @@
 
 #include "BorderDecorator.h"
 #include "EventListener.h"
+#include "VisualItem.h"
 
 #ifndef __HScrollbar_H_
 #define __HScrollbar_H_
@@ -17,7 +18,7 @@ class HScrollbar : public BorderDecorator,public EventListener {
 
 public:
     HScrollbar(BorderDecorator& rd);
-    HScrollbar(VisualElement& ve);
+    HScrollbar(VisualItem& ve);
 
     void draw();
     void someOtherFuntion();
