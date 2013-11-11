@@ -3,7 +3,7 @@ ASCII_Pic/ASCII_Pic.1
 *.xcuserstate
 *.xccheckout
 .idea
-*.xcscheme
+#*.xcscheme
 *.pdf
 ASCII_Pic.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 ASCII_Pic.xcodeproj/xcuserdata/tindrum.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9DEB08AC182C75FE00C792EA"
+               BuildableName = "ASCII_Pic"
+               BlueprintName = "ASCII_Pic"
+               ReferencedContainer = "container:ASCII_Pic.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9DEB08AC182C75FE00C792EA"
+            BuildableName = "ASCII_Pic"
+            BlueprintName = "ASCII_Pic"
+            ReferencedContainer = "container:ASCII_Pic.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-h"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "3"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-w"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "10"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-s"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
+   </LaunchAction>
+</Scheme>
