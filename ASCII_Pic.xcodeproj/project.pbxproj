@@ -20,6 +20,7 @@
 		B1BCF3E7BA146AF27B4991E2 /* EventListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCFC04D70840EA61392F01 /* EventListener.cpp */; };
 		B1BCF677D0997629D98D4BE0 /* VScrollBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCF9C5AC86AF1EAB6D6BF9 /* VScrollBar.cpp */; };
 		B1BCF6E8B2B17059DBAD52EA /* VisualItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCF2BFB80AACF0784C92B9 /* VisualItem.cpp */; };
+		B1BCF788B0936FA507D16F37 /* CharacterPicture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCFE30443754A2D82422AC /* CharacterPicture.cpp */; };
 		B1BCF7C5581B148471F3C7F5 /* Scrollbar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCFF8EC853776D3628B3F3 /* Scrollbar.cpp */; };
 		B1BCF96874BAEA12555A4214 /* EventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCFBE9FC380D27A6A918B3 /* EventManager.cpp */; };
 		B1BCFE5A5E02C3E0CC0C52B4 /* HScrollbar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCFFFFF196F138A2B1E719 /* HScrollbar.cpp */; };
@@ -62,6 +63,7 @@
 		B1BCF55E779C8E3E72B5E581 /* EventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListener.h; sourceTree = "<group>"; };
 		B1BCF5C4885A459F97F434D4 /* User_Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = User_Event.cpp; path = ASCII_Pic/User_Event.cpp; sourceTree = "<group>"; };
 		B1BCF5DB9D29E4F23C25A8A4 /* SingleBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleBorder.h; sourceTree = "<group>"; };
+		B1BCF6BB903294EDBF477C8E /* CharacterPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterPicture.h; sourceTree = "<group>"; };
 		B1BCF6E3415058F07BDC671C /* Scrollbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scrollbar.h; sourceTree = "<group>"; };
 		B1BCF88B878833180404679D /* VisualItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualItem.h; sourceTree = "<group>"; };
 		B1BCF9C5AC86AF1EAB6D6BF9 /* VScrollBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VScrollBar.cpp; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		B1BCFC04D70840EA61392F01 /* EventListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventListener.cpp; sourceTree = "<group>"; };
 		B1BCFC94075A809878D129DE /* BorderDecorator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BorderDecorator.cpp; sourceTree = "<group>"; };
 		B1BCFCCFC25AC690FE61C03E /* EventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventManager.h; sourceTree = "<group>"; };
+		B1BCFE30443754A2D82422AC /* CharacterPicture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterPicture.cpp; sourceTree = "<group>"; };
 		B1BCFF8EC853776D3628B3F3 /* Scrollbar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scrollbar.cpp; sourceTree = "<group>"; };
 		B1BCFFFFF196F138A2B1E719 /* HScrollbar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HScrollbar.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +148,8 @@
 			children = (
 				B1BCF88B878833180404679D /* VisualItem.h */,
 				B1BCF2BFB80AACF0784C92B9 /* VisualItem.cpp */,
+				B1BCFE30443754A2D82422AC /* CharacterPicture.cpp */,
+				B1BCF6BB903294EDBF477C8E /* CharacterPicture.h */,
 			);
 			name = Character;
 			path = ASCII_Pic/Character;
@@ -235,6 +240,7 @@
 				B1BCF96874BAEA12555A4214 /* EventManager.cpp in Sources */,
 				B1BCF3E7BA146AF27B4991E2 /* EventListener.cpp in Sources */,
 				B1BCF38D8D5155BAAB5236AF /* User_Event.cpp in Sources */,
+				B1BCF788B0936FA507D16F37 /* CharacterPicture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

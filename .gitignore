@@ -8,3 +8,4 @@ ASCII_Pic/ASCII_Pic.1
 ASCII_Pic.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 ASCII_Pic.xcodeproj/xcuserdata/tindrum.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
 ASCII_Pic.xcodeproj/xcuserdata/tindrum.xcuserdatad/xcschemes/xcschememanagement.plist
+*.timemachine.supported
