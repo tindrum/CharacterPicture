@@ -125,6 +125,9 @@ int main(int argc, char * argv[])
             cout << fed;
             const Picture &hfed = ed | fed;
             cout << hfed;
+            const Picture &re_fed = reframe(fed, '#', '|', '_');
+            cout << hfed;
+            cout << re_fed;
         }   else {
             // passed a file
         }

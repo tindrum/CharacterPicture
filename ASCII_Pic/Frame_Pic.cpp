@@ -35,7 +35,7 @@ void Frame_Pic::display(ostream& os, int row, int wd) const{
             while(--i >= 0){
                 os << _topborder;
             }
-            os << '+';
+            os << _corner;
         }
         else{
             os << _sideborder;
