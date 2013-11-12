@@ -40,12 +40,6 @@ private:
 
 protected:
 
-    class MyListener: public EventListener {
-    public:
-        MyListener(P_Node* pPN) { _pfp = pFP; };
-        void onEvent(int e) { _psb->onEvent(e); }
-        P_Node* _pPN;
-    };
 
     void onEvent(int event);
 

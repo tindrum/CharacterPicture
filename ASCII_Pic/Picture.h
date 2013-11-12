@@ -52,10 +52,11 @@ private:
 
 
 
-        public:
+public:
     void showDebug() const;
 private:
     P_Node* _pnode;
+
 };
 
 #endif /* defined(__ASCII_Pic__Picture__) */

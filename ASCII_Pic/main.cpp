@@ -35,6 +35,7 @@
 #include "Picture.h"
 #include "VCat_Pic.h"
 #include "HCat_Pic.h"
+#include "EventManager.h"
 // #include "HScrollbar.h" TODO: HScrollbar
 
 #include <iostream>
@@ -176,6 +177,8 @@ int main(int argc, char * argv[])
     //  end getopt section
 
 
+    EventManager* eventLoop;
+    eventLoop = EventManager::getManager();
 
     if (svalue || fvalue ) {
         if (svalue ) {      // passed a string on the command line
