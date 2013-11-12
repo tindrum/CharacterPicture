@@ -4,3 +4,5 @@ ASCII_Pic/ASCII_Pic.1
 *.xccheckout
 .idea
 *.xcscheme
+*.pdf
+*.timemachine.supported
