@@ -35,7 +35,7 @@
 #include "Picture.h"
 #include "VCat_Pic.h"
 #include "HCat_Pic.h"
-#include "HScrollbar.h"
+// #include "HScrollbar.h" TODO: HScrollbar
 
 #include <iostream>
 #include <unistd.h>

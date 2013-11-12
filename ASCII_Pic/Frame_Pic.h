@@ -12,6 +12,8 @@
 #include <iostream>
 #include "P_Node.h"
 #include "Picture.h"
+#include "EventListener.h"
+
 using namespace std;
 
 class Frame_Pic : public P_Node{
@@ -35,5 +37,17 @@ private:
     char _corner;
     char _sideborder;
     char _topborder;
+
+protected:
+
+    class MyListener: public EventListener {
+    public:
+        MyListener(P_Node* pPN) { _pfp = pFP; };
+        void onEvent(int e) { _psb->onEvent(e); }
+        P_Node* _pPN;
+    };
+
+    void onEvent(int event);
+
 };
 #endif /* defined(__ASCII_Pic__Frame_Pic__) */

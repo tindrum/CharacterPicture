@@ -16,7 +16,6 @@
 		9DEB08C7182C779C00C792EA /* Frame_Pic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB08C5182C779C00C792EA /* Frame_Pic.cpp */; };
 		9DEB08CA182C77A200C792EA /* String_Pic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB08C8182C77A200C792EA /* String_Pic.cpp */; };
 		B1BCF04AC56106144D7F24C6 /* EventListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCF9D4F902A6163426F8D2 /* EventListener.cpp */; };
-		B1BCF204879D0AE33DE6D62F /* HScrollbar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCFAF2B6D3D908E383B99B /* HScrollbar.cpp */; };
 		B1BCF60F9309851548F26507 /* User_Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCFCBA688684B6482CD1BF /* User_Event.cpp */; };
 		B1BCFFDE2EE09D9137E453ED /* EventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BCF3A83BF34B915C6FAE8E /* EventManager.cpp */; };
 /* End PBXBuildFile section */
@@ -54,9 +53,7 @@
 		B1BCF4AB6EFC8FCF30251920 /* EventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventManager.h; sourceTree = "<group>"; };
 		B1BCF641262F41B1170F15AE /* User_Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User_Event.h; sourceTree = "<group>"; };
 		B1BCF7BB473CB5657C1A1A97 /* EventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListener.h; sourceTree = "<group>"; };
-		B1BCF7C700B9D63AB939E3B0 /* HScrollbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HScrollbar.h; sourceTree = "<group>"; };
 		B1BCF9D4F902A6163426F8D2 /* EventListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventListener.cpp; sourceTree = "<group>"; };
-		B1BCFAF2B6D3D908E383B99B /* HScrollbar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HScrollbar.cpp; sourceTree = "<group>"; };
 		B1BCFCBA688684B6482CD1BF /* User_Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = User_Event.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,8 +102,6 @@
 				9DEB08C8182C77A200C792EA /* String_Pic.cpp */,
 				9DEB08C9182C77A200C792EA /* String_Pic.h */,
 				B1BCF26F71EEA99D9007D168 /* EventManager */,
-				B1BCFAF2B6D3D908E383B99B /* HScrollbar.cpp */,
-				B1BCF7C700B9D63AB939E3B0 /* HScrollbar.h */,
 			);
 			path = ASCII_Pic;
 			sourceTree = "<group>";
@@ -185,7 +180,6 @@
 				B1BCF60F9309851548F26507 /* User_Event.cpp in Sources */,
 				B1BCFFDE2EE09D9137E453ED /* EventManager.cpp in Sources */,
 				B1BCF04AC56106144D7F24C6 /* EventListener.cpp in Sources */,
-				B1BCF204879D0AE33DE6D62F /* HScrollbar.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
