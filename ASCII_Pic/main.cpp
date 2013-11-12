@@ -9,6 +9,8 @@
 //  Command line arguments:
 //  [optional] -h <height>       height of text window ( default value: number of lines in input text )
 //  [optional] -w <width>        width of text window  ( default value: twelve or so )
+//             -x <x-offset>     offset from the left of the windowed area of text
+//             -y <y-offset>     offset from the top of the windowed area of text
 //  [optional] -s <string>       quoted text string with dashes for each desired newline
 //                               Each desired line must end with a dash:
 //                               "Print each-line followed-by a-dash or the-last line-won't show up-"
@@ -91,6 +93,10 @@ int main(int argc, char * argv[])
     char *hvalue;
     int wflag = 0;
     char *wvalue;
+    int xflag = 0;
+    char *xvalue;
+    int yflag = 0;
+    char *yvalue;
     char *svalue = NULL;
     char *fvalue = NULL;
     int index;
@@ -98,7 +104,7 @@ int main(int argc, char * argv[])
     
     opterr = 0;
     
-    while (( c = getopt (argc, argv, "h::w::s:f:")) != -1 )
+    while (( c = getopt (argc, argv, "h::w::x::y::s:f:")) != -1 )
         switch (c)
     {
         case 'h':
@@ -116,7 +122,25 @@ int main(int argc, char * argv[])
                 wvalue = optarg;
             } else {
                 wflag = 0;
-                // hvalue = "";
+                // wvalue = "";
+            }
+            break;
+        case 'x':
+            if (optarg) {
+                xflag = 1;
+                xvalue = optarg;
+            } else {
+                xflag = 0;
+                // xvalue = "";
+            }
+            break;
+        case 'y':
+            if (optarg) {
+                yflag = 1;
+                yvalue = optarg;
+            } else {
+                yflag = 0;
+                // yvalue = "";
             }
             break;
         case 's':
