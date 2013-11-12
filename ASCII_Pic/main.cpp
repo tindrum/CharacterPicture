@@ -37,6 +37,7 @@
 #include "HCat_Pic.h"
 #include "BorderDecorator.h"
 #import "SingleBorder.h"
+#include "CharacterPicture.h"
 
 #include <iostream>
 #include <unistd.h>
@@ -47,8 +48,61 @@ const char* init[] = { "Paris", "in the", "Spring" };
 const char* joju[] = { "London", "is best", "when Christmas", "comes to call" };
 const char* knkv[] = { "Fidling", "with a program", "until it appears to work", "is a reliable way", "of obtaining a program", " that almost works."};
 
-void doTest();
-void doTest2();
+void doTest1(int nStrings, char** stringsPArray) {
+    VisualItem* pVI = new CharacterPicture( -1,-1, nStrings, stringsPArray);
+
+    //pVI->draw();
+
+}
+
+void doTest2 (int nStrings, char** stringsPArray) {
+    CharacterPicture* pCP = new CharacterPicture( -1,-1, nStrings, stringsPArray);
+    {
+        const BorderDecorator &bd = SingleBorder('@', pCP);
+        bd.draw();
+        //const BorderDecorator &bd2 = SingleBorder('&', bd);
+        //bd2.draw();
+    }
+    pCP->release();
+    cout << "Done!\n";
+}
+
+void doTest() {
+    const Picture &pic = Picture(init, 3);
+    const Picture &fpic = frame(pic);
+
+    Picture rke(knkv, 6);
+    const Picture &frke = frame(rke);
+
+    Picture qjd(joju, 4);
+    const Picture &fqjd = frame(qjd);
+
+    cout << fpic << endl;
+    const Picture &re_fpic = reframe(fpic, 'o', '!', '~');
+    cout << re_fpic << endl;
+
+    cout << fqjd << endl;
+    const Picture &re_fqjd = reframe(fqjd, '$', '@', '=');
+    cout << re_fqjd << endl;
+
+    cout << frke << endl;
+
+    const Picture &left_right = re_fpic | re_fqjd;
+
+    const Picture &top_bottom = frke & re_fqjd;
+    cout << top_bottom << endl;
+
+    const Picture &tblr = top_bottom | left_right;
+    cout << tblr << endl;
+
+    const Picture &ftblr = frame(tblr);
+    cout << ftblr << endl;
+
+    const Picture &ftblr_paris = ftblr & re_fpic;
+    const Picture &f_ftblr_paris = frame(ftblr_paris);
+    cout << f_ftblr_paris << endl;
+}
+
 
 int main(int argc, char * argv[])
 {
@@ -142,6 +196,13 @@ int main(int argc, char * argv[])
     
     
     //  end getopt section
+    int idx = 0;
+    int nStrings = argc-optind;
+
+    char ** myStrings = new char*[argc-optind];
+    for (int x=optind;x<argc;x++) {
+        myStrings[idx++] = argv[x];
+    }
 
 
 
@@ -164,7 +225,8 @@ int main(int argc, char * argv[])
         else
     {
         //doTest();
-        doTest2();
+        doTest1( nStrings, myStrings );
+        doTest2( nStrings, myStrings );
 
     }
     // end verbatim text from class assignment
@@ -173,46 +235,5 @@ int main(int argc, char * argv[])
     cout << "...done." << endl;
     
     return 0;
-}
-
-void doTest2() {
-    const BorderDecorator &bd = SingleBorder('@',
-            CharacterPicture( -1,-1, argc, argv));
-}
-
-void doTest() {
-    const Picture &pic = Picture(init, 3);
-    const Picture &fpic = frame(pic);
-
-    Picture rke(knkv, 6);
-    const Picture &frke = frame(rke);
-
-    Picture qjd(joju, 4);
-    const Picture &fqjd = frame(qjd);
-
-    cout << fpic << endl;
-    const Picture &re_fpic = reframe(fpic, 'o', '!', '~');
-    cout << re_fpic << endl;
-
-    cout << fqjd << endl;
-    const Picture &re_fqjd = reframe(fqjd, '$', '@', '=');
-    cout << re_fqjd << endl;
-
-    cout << frke << endl;
-
-    const Picture &left_right = re_fpic | re_fqjd;
-
-    const Picture &top_bottom = frke & re_fqjd;
-    cout << top_bottom << endl;
-
-    const Picture &tblr = top_bottom | left_right;
-    cout << tblr << endl;
-
-    const Picture &ftblr = frame(tblr);
-    cout << ftblr << endl;
-
-    const Picture &ftblr_paris = ftblr & re_fpic;
-    const Picture &f_ftblr_paris = frame(ftblr_paris);
-    cout << f_ftblr_paris << endl;
 }
 

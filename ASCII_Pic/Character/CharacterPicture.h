@@ -12,6 +12,8 @@
 
 
 class CharacterPicture : public Picture {
+public:
+    CharacterPicture(int w, int h, int nStrings, char** pStrings);
 
 };
 

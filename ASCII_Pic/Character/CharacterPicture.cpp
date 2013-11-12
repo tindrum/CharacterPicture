@@ -5,3 +5,7 @@
 
 
 #include "CharacterPicture.h"
+
+CharacterPicture::CharacterPicture(int w, int h, int nStrings, char **pStrings) : Picture(pStrings,nStrings) {
+
+}

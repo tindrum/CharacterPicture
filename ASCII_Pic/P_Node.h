@@ -28,7 +28,7 @@ public:
     
 protected:
     int max(int m, int n) const;
-    static void pad(ostream& os, int x, int y);
+    void pad(ostream& os, int x, int y) const ;
     
 public:
     void showDebug() const;

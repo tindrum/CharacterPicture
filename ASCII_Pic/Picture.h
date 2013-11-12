@@ -38,7 +38,13 @@ public:
     friend Picture operator&(const Picture& top, const Picture& bottom);
     friend Picture operator|(const Picture& left, const Picture& right);
 
-    virtual void draw();
+    virtual void draw() const;
+    virtual void release() { if (--_refcnt == 0) {
+            delete this;
+        }
+    }
+
+    virtual void retain() { _refcnt++ ;}
     
 private:
     Picture(P_Node* pnode);
@@ -58,6 +64,7 @@ public:
     void showDebug() const;
 private:
     P_Node* _pnode;
+    int _refcnt;
 };
 
 #endif /* defined(__ASCII_Pic__Picture__) */

@@ -29,15 +29,15 @@
 
 using namespace std;
 
-Picture::Picture(P_Node* pnode) : _pnode(pnode){
+Picture::Picture(P_Node* pnode) : _refcnt(1),_pnode(pnode){
     pnode->_use++;
 }
 
-Picture::Picture(const char* const * pLines, int nLines) : _pnode( new String_Pic(pLines, nLines)){
+Picture::Picture(const char* const * pLines, int nLines) : _refcnt(1),_pnode( new String_Pic(pLines, nLines)){
     
 }
 
-Picture::Picture ( char* phrase ) {
+Picture::Picture ( char* phrase ) : _refcnt(1) {
     char* pch;
     int dashCount = 0;
     for (int j = 0; j < strlen(phrase); j++){
@@ -48,7 +48,7 @@ Picture::Picture ( char* phrase ) {
     }
 
 
-//
+/*
 //    http://www.cplusplus.com/reference/cstring/strtok/
 //    {
 //        char str[] ="- This, a sample string.";
@@ -62,7 +62,7 @@ Picture::Picture ( char* phrase ) {
 //        }
 //        return 0;
 //    }
-//
+*/
 
     // TODO: fix that it needs a newline at the end of every line
     //       this might be the way strtok works, though
@@ -84,7 +84,7 @@ Picture::Picture ( char* phrase ) {
 
 
 
-Picture::Picture(const Picture& other) : _pnode(other._pnode){
+Picture::Picture(const Picture& other) : _refcnt(0), _pnode(other._pnode){
     other._pnode->_use++;
 }
 
@@ -145,6 +145,7 @@ void Picture::showDebug() const{
 }
 
 
-void Picture::draw() {
-
+void Picture::draw() const {
+    cout << "Picture.draw() called\n";
+    cout << *this << endl;
 }

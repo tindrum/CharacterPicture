@@ -38,7 +38,8 @@ int String_Pic::width() const{
 void String_Pic::display(ostream& os, int row, int width) const{
     int start = 0;
     if(row >= 0 && row < height()){
-        os << _data[row];
+        const char* tmp = getString(row);
+        os << tmp;
         start = static_cast<int>(strlen(_data[row]));
     }
     pad(os,start,width);
@@ -55,4 +56,9 @@ void String_Pic::showDebug() const{
 
 Picture* String_Pic::getPic(){
     return NULL;
+}
+
+const char *String_Pic::getString(int row) const {
+    const char* tmp = _data[row];
+    return tmp;
 }

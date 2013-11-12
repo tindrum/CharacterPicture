@@ -16,7 +16,7 @@ P_Node::~P_Node() {  }
 
 int P_Node::max(int m, int n ) const { return m > n ? m : n; }
 
-void P_Node::pad( ostream& os, int x, int y ) {
+void P_Node::pad( ostream& os, int x, int y ) const {
     for (int i = x; i < y; i++) {
         os << " ";
     }

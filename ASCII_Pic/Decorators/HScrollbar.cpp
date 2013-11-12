@@ -7,7 +7,7 @@
 #include "HScrollbar.h"
 #include "EventManager.h"
 
-HScrollbar::HScrollbar(BorderDecorator &rd) {
+HScrollbar::HScrollbar(BorderDecorator &rd) : BorderDecorator( rd ) {
     EventManager* pMgr = EventManager::getManager();
 
     pMgr->registerForEvent(34, this);

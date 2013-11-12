@@ -10,8 +10,10 @@
 
 
 class VisualItem {
-
-    virtual void draw() = 0;
+public:
+    virtual void draw() const = 0;
+    virtual void release() = 0;
+    virtual void retain() = 0;
 
 };
 

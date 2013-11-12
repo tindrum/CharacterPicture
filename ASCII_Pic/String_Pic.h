@@ -27,6 +27,8 @@ private:
     int      width()  const;
     void     display( ostream& os, int x, int y ) const;
     Picture  reframe( char c, char s, char t );
+
+    const char * getString(int row) const;
     
 public:
     void showDebug() const;
