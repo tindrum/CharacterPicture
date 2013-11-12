@@ -35,7 +35,8 @@ public:
     friend Picture reframe(const Picture&, char, char, char);
     friend Picture operator&(const Picture& top, const Picture& bottom);
     friend Picture operator|(const Picture& left, const Picture& right);
-    
+    friend Picture addScrollbar(const Picture& contentArea);
+
 private:
     Picture(P_Node* pnode);
     

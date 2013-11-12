@@ -1,21 +1,26 @@
 //
-// Created by Ed on 11/11/13.
+// Created by Daniel Henderson on 11/11/13.
 // Copyright (c) 2013 Daniel Henderson. All rights reserved.
 //
 
 
 
-#include "EventListener.h"
-#include "P_Node.h"
 
 #ifndef __HScrollbar_H_
 #define __HScrollbar_H_
 
-Picture addHScrollbar( const Picture& contentWindow );
+#include "EventListener.h"
+#include <iostream>
+#include "P_Node.h"
+#include "Picture.h"
+#include "VCat_Pic.h"
+
+
+Picture addScrollbar( const Picture& contentWindow );
 
 class HScrollbar : public P_Node, public EventListener {
 private:
-    HScrollbar(const Picture& contentWindow);
+    friend class Picture;
 
     int height() const;
     int width() const;
@@ -23,11 +28,14 @@ private:
     Picture reframe(char c, char s, char t); //
 
     friend Picture operator&(const Picture& contentWindow);
+    HScrollbar(const Picture& contentWindow);
 
 public:
     Picture* getPic();
 
+
 protected:
+
     class MyListener: public EventListener {
     public:
         MyListener(HScrollbar* pSB) { _psb = pSB; };

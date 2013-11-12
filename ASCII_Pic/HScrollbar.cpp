@@ -6,6 +6,7 @@
 
 #include "HScrollbar.h"
 #include "EventManager.h"
+#include "Picture.h"
 #include <curses.h>
 #include <iostream>
 using namespace std;
@@ -16,6 +17,7 @@ HScrollbar::HScrollbar( const Picture& contWin )
 
     pMgr->registerForEvent(KEY_LEFT, this);
     pMgr->registerForEvent(KEY_RIGHT, this);
+
 }
 
 int HScrollbar::height() const {
@@ -42,7 +44,7 @@ void HScrollbar::onEvent(int event){
 }
 
 void HScrollbar::display(ostream &os, int row, int wd) const {
-    cout << "scroll bar\n";
+    cout << "|<- scroll bar ->|\n";
 
 }
 
@@ -52,4 +54,9 @@ Picture* HScrollbar::getPic() {
 
 Picture HScrollbar::reframe(char c, char s, char t) {
     return new HScrollbar( ::reframe( _contentWindow, c, s, t));
+}
+
+
+Picture addScrollbar(const Picture &contentArea) {
+    return new HScrollbar(contentArea._pnode);
 }
