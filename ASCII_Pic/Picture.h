@@ -43,6 +43,7 @@ private:
     friend class Frame_Pic;
     friend class HCat_Pic;
     friend class VCat_Pic;
+    friend class HScrollbar;
     
     int height() const;
     int width() const;

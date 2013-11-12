@@ -17,14 +17,15 @@ class HScrollbar : public P_Node, public EventListener {
 private:
     HScrollbar(const Picture& contentWindow);
 
-    int height() const { return 3 }; // TODO: remove border from top of scrollbar pane and return 2 instead
+    int height() const;
     int width() const;
     void display(ostream& os, int row, int wd) const;
     Picture reframe(char c, char s, char t); //
 
     friend Picture operator&(const Picture& contentWindow);
+
 public:
-    Picture *getPic();
+    Picture* getPic();
 
 protected:
     class MyListener: public EventListener {
