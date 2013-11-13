@@ -11,7 +11,7 @@
 #include "String_Pic.h"
 #include "Frame_Pic.h"
 #include "P_Node.h"
-// #include "HScrollbar.h" TODO: HScrollbar
+#include "HScrollbar.h" // TODO: HScrollbar
 #include "VCat_Pic.h"
 #include <iostream>
 #include <regex>
@@ -116,9 +116,9 @@ Picture reframe(const Picture& pic, char c, char s, char t){
 }
 
 // TODO: HScrollbar
-//Picture addScrollbar(const Picture& pic){
-//    return new HScrollbar(pic._pnode);
-//}
+Picture addScrollbar(const Picture& pic){
+    return new HScrollbar(pic._pnode);
+}
 
 int Picture::height() const{
     return _pnode->height();

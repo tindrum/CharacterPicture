@@ -36,7 +36,7 @@
 #include "VCat_Pic.h"
 #include "HCat_Pic.h"
 #include "EventManager.h"
-// #include "HScrollbar.h" TODO: HScrollbar
+#include "HScrollbar.h" // TODO: HScrollbar
 
 #include <iostream>
 #include <unistd.h>

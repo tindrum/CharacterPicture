@@ -16,11 +16,11 @@
 #include "VCat_Pic.h"
 
 
-Picture addScrollbar( const Picture& contentWindow );
 
 class HScrollbar : public P_Node, public EventListener {
 private:
     friend class Picture;
+    friend Picture addScrollbar( const Picture& contentWindow );
 
     int height() const;
     int width() const;

@@ -35,7 +35,7 @@ public:
     friend Picture reframe(const Picture&, char, char, char);
     friend Picture operator&(const Picture& top, const Picture& bottom);
     friend Picture operator|(const Picture& left, const Picture& right);
-    // friend Picture addScrollbar(const Picture& contentArea); TODO: HScrollbar
+    friend Picture addScrollbar(const Picture& contentArea); // TODO: HScrollbar
 
 private:
     Picture(P_Node* pnode);
@@ -44,7 +44,7 @@ private:
     friend class Frame_Pic;
     friend class HCat_Pic;
     friend class VCat_Pic;
-    // friend class HScrollbar; TODO: HScrollbar
+    friend class HScrollbar; // TODO: HScrollbar
     
     int height() const;
     int width() const;
