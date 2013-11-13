@@ -56,7 +56,3 @@ Picture HScrollbar::reframe(char c, char s, char t) {
     return new HScrollbar( ::reframe( _contentWindow, c, s, t));
 }
 
-
-Picture addScrollbar(const Picture &contentArea) {
-    return new HScrollbar(contentArea._pnode);
-}
