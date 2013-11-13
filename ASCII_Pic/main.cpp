@@ -9,6 +9,8 @@
 //  Command line arguments:
 //  [optional] -h <height>       height of text window ( default value: number of lines in input text )
 //  [optional] -w <width>        width of text window  ( default value: twelve or so )
+//             -x <x-offset>     offset from the left of the windowed area of text
+//             -y <y-offset>     offset from the top of the windowed area of text
 //  [optional] -s <string>       quoted text string with dashes for each desired newline
 //                               Each desired line must end with a dash:
 //                               "Print each-line followed-by a-dash or the-last line-won't show up-"
@@ -33,6 +35,8 @@
 #include "Picture.h"
 #include "VCat_Pic.h"
 #include "HCat_Pic.h"
+#include "EventManager.h"
+#include "HScrollbar.h" // TODO: HScrollbar
 
 #include <iostream>
 #include <unistd.h>
@@ -43,94 +47,7 @@ const char* init[] = { "Paris", "in the", "Spring" };
 const char* joju[] = { "London", "is best", "when Christmas", "comes to call" };
 const char* knkv[] = { "Fidling", "with a program", "until it appears to work", "is a reliable way", "of obtaining a program", " that almost works."};
 
-int main(int argc, char * argv[])
-{
-    //  begin getopt section
-    //  getting parameters from the command line with getopt
-    //
-    int hflag = 0;
-    char *hvalue;
-    int wflag = 0;
-    char *wvalue;
-    char *svalue = NULL;
-    char *fvalue = NULL;
-    int index;
-    int c;
-    
-    opterr = 0;
-    
-    while (( c = getopt (argc, argv, "h::w::s:f:")) != -1 )
-        switch (c)
-    {
-        case 'h':
-            if (optarg) {
-                hflag = 1;
-                hvalue = optarg;
-            } else {
-                hflag = 0;
-                // hvalue = "";
-            }
-            break;
-        case 'w':
-            if (optarg) {
-                wflag = 1;
-                wvalue = optarg;
-            } else {
-                wflag = 0;
-                // hvalue = "";
-            }
-            break;
-        case 's':
-            svalue = optarg;
-            break;
-        case 'f':
-            fvalue = optarg;
-            break;
-            case '?':
-            if (optopt == 's')
-                fprintf(stderr, "Option -%c requires an argument.\n", optopt);
-            else if (optopt == 'f')
-                fprintf(stderr, "Option -%c requires an argument.\n", optopt);
-            else if (isprint(optopt))
-                fprintf(stderr, "Unknown option `-%c'.\n", optopt);
-            else
-                fprintf(stderr, "Unknown option character `\\x%x'.\n", optopt);
-            return 1;
-        default:
-            abort ();
-    }
-    
-    
-/*      // Example of dynamic string
-    int mylen = strlen(argv[0]);
-    char * astring = char[100]; // This will go out of scope later.. if it's in a function.
-    char * dynamicString = new char[mylen+1];
-
-    strcpy(dynamicString,argv[0]);
-    cout << "This is my new string " << dynamicString << endl; 
-*/
-
-    
-    
-    //  end getopt section
-
-
-
-    //  Verbatim text from class assignment
-    if (svalue || fvalue ) {
-        if (svalue ) {      // passed a string on the command line
-            const Picture &ed = Picture( svalue );
-            cout << ed;
-            const Picture &fed = frame(ed);
-            cout << fed;
-            const Picture &hfed = ed | fed;
-            cout << hfed;
-        }   else {
-            // passed a file
-        }
-    }
-        else
-    {
+void manyObjects() {
         const Picture &pic = Picture(init, 3);
         const Picture &fpic = frame(pic);
 
@@ -166,8 +83,120 @@ int main(int argc, char * argv[])
         cout << f_ftblr_paris << endl;
 
     }
-    // end verbatim text from class assignment
 
+int main(int argc, char * argv[])
+{
+
+    // begin getopt parsing section
+    //  begin getopt section
+    //  getting parameters from the command line with getopt
+    //
+    int hflag = 0;
+    char *hvalue;
+    int wflag = 0;
+    char *wvalue;
+    int xflag = 0;
+    char *xvalue;
+    int yflag = 0;
+    char *yvalue;
+    char *svalue = NULL;
+    char *fvalue = NULL;
+    int index;
+    int c;
+    
+    opterr = 0;
+    
+    while (( c = getopt (argc, argv, "h::w::x::y::s:f:")) != -1 )
+        switch (c)
+    {
+        case 'h':
+            if (optarg) {
+                hflag = 1;
+                hvalue = optarg;
+            } else {
+                hflag = 0;
+                // hvalue = "";
+            }
+            break;
+        case 'w':
+            if (optarg) {
+                wflag = 1;
+                wvalue = optarg;
+            } else {
+                wflag = 0;
+                // wvalue = "";
+            }
+            break;
+        case 'x':
+            if (optarg) {
+                xflag = 1;
+                xvalue = optarg;
+            } else {
+                xflag = 0;
+                // xvalue = "";
+            }
+            break;
+        case 'y':
+            if (optarg) {
+                yflag = 1;
+                yvalue = optarg;
+            } else {
+                yflag = 0;
+                // yvalue = "";
+            }
+            break;
+        case 's':
+            svalue = optarg;
+            break;
+        case 'f':
+            fvalue = optarg;
+            break;
+            case '?':
+            if (optopt == 's')
+                fprintf(stderr, "Option -%c requires an argument.\n", optopt);
+            else if (optopt == 'f')
+                fprintf(stderr, "Option -%c requires an argument.\n", optopt);
+            else if (isprint(optopt))
+                fprintf(stderr, "Unknown option `-%c'.\n", optopt);
+            else
+                fprintf(stderr, "Unknown option character `\\x%x'.\n", optopt);
+            return 1;
+        default:
+            abort ();
+    }
+    // end getopt parsing section
+    
+/*      // Example of dynamic string
+    int mylen = strlen(argv[0]);
+    char * astring = char[100]; // This will go out of scope later.. if it's in a function.
+    char * dynamicString = new char[mylen+1];
+
+    strcpy(dynamicString,argv[0]);
+    cout << "This is my new string " << dynamicString << endl; 
+*/
+    //  end getopt section
+
+
+    EventManager* eventLoop;
+    eventLoop = EventManager::getManager();
+
+    if (svalue || fvalue ) {
+        if (svalue ) {      // passed a string on the command line
+            const Picture &ed = Picture( svalue );
+            cout << ed;
+            const Picture &fed = frame(ed);
+            cout << fed;
+            const Picture &hfed = ed | fed;
+            cout << hfed;
+            //const Picture &sed = addScrollbar(ed);
+            //cout << sed;
+        }   else {
+            // passed a file
+        }
+    }
+        else {
+        manyObjects();
+    }
 
     cout << "...done." << endl;
     
