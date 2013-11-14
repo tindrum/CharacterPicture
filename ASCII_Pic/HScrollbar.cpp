@@ -46,20 +46,35 @@ void HScrollbar::onEvent(int event){
 void HScrollbar::display(ostream &os, int row, int wd) const {
     if (row <= _contentWindow.height()) {
         _contentWindow.display(os, row, wd);
-    } else if ( row == ( _contentWindow.height()   )) {
-        for (int i = 0; i < (_contentWindow.width()); i++) {
-            os << "-";
+    } else if ( row > ( _contentWindow.height()   ))
+    {
+         if ( row == _contentWindow.height() +0 ) // TODO: draw plain dashed line AND <-HASH-> line
+        {
+            for (int i = 0; i < (_contentWindow.width()); i++) {
+                os << "-";
+            }
+        } else if ( row == _contentWindow.height() +1 ) {
+            os << "<-";
+            for (int i = 0; i < (_contentWindow.width() -4); i++) {
+                os << "#";
+            }
+            os << "->";
+        } else {
+            cerr << "printing past bottom of object. HScrollbar class.\n";
         }
-    } else if ( row == _contentWindow.height() +1 ) {
-    os << "<-";
-    for (int i = 0; i < (_contentWindow.width() -4); i++) {
-        os << "#";
     }
-    os << "->";
-    } else {
-        cerr << "printing past bottom of object. HScrollbar class.\n";
-    }
-}
+} // end HScrollbar::display
+// TODO: The problem with drawing dashed line and hashed line may stem from
+// an extra linefeed somewhere in the last line of the parent node.
+// Look at the String_Pic being created by the command-line -s option.
+// Try decorating the statically-created String_Pic objects to see if they suffer
+// from the same bug. If not, the problem is with Dan's command-line parser,
+// which has other problems anyway.
+//
+// Problem still exists in static-created String_Pics. Need to trace.
+// (On the good side, it does properly handle nested-decorated objects
+// insofar as the width is concerned.
+
 
 Picture* HScrollbar::getPic() {
     return &_contentWindow;

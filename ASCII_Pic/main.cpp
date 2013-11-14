@@ -36,7 +36,7 @@
 #include "VCat_Pic.h"
 #include "HCat_Pic.h"
 #include "EventManager.h"
-#include "HScrollbar.h" // TODO: HScrollbar
+#include "HScrollbar.h"
 
 #include <iostream>
 #include <unistd.h>
@@ -49,6 +49,8 @@ const char* knkv[] = { "Fidling", "with a program", "until it appears to work", 
 
 void manyObjects() {
         const Picture &pic = Picture(init, 3);
+        const Picture &HSpic = addScrollbar(pic);
+        cout << HSpic;
         const Picture &fpic = frame(pic);
 
         Picture rke(knkv, 6);
@@ -81,6 +83,8 @@ void manyObjects() {
         const Picture &ftblr_paris = ftblr & re_fpic;
         const Picture &f_ftblr_paris = frame(ftblr_paris);
         cout << f_ftblr_paris << endl;
+        const Picture &HS_f_ftblr_paris = addScrollbar(f_ftblr_paris);
+        cout << HS_f_ftblr_paris;
 
     }
 
