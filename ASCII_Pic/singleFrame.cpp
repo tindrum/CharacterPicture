@@ -2,7 +2,7 @@
 //  singleFrame.cpp
 //  ASCII_Pic
 //
-//  Created by Josh Maguregui on 11/13/13.
+//  By Daniel Henderson and Josh Maguregui
 //  Copyright (c) 2013 Daniel Henderson. All rights reserved.
 //
 
