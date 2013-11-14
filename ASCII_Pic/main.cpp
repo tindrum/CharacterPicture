@@ -186,6 +186,8 @@ int main(int argc, char * argv[])
             cout << ed;
             const Picture &sed = addScrollbar(ed);
             cout << sed;
+            const Picture &fsed = frame(sed);
+            cout << fsed;
         }   else {
             // passed a file
         }
