@@ -200,6 +200,8 @@ int main(int argc, char * argv[])
         manyObjects();
     }
 
+    eventLoop->run();
+
     cout << "...done." << endl;
     
     return 0;

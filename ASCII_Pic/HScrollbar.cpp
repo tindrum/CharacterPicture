@@ -7,7 +7,7 @@
 #include "HScrollbar.h"
 #include "EventManager.h"
 #include "Picture.h"
-#include <curses.h>
+#include <ncurses.h>
 #include <iostream>
 using namespace std;
 
@@ -15,8 +15,8 @@ HScrollbar::HScrollbar( const Picture& contWin )
 : P_Node(), _contentWindow(contWin) {
     EventManager* pMgr = EventManager::getManager();
 
-    pMgr->registerForEvent(KEY_LEFT, this);
-    pMgr->registerForEvent(KEY_RIGHT, this);
+    pMgr->registerForEvent((int)'<', this);  // TODO: get to work with KEY_LEFT
+    pMgr->registerForEvent((int)'>', this);  // TODO: get to work with KEY_RIGHT
 
 }
 

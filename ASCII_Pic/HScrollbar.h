@@ -10,6 +10,8 @@
 #define __HScrollbar_H_
 
 #include "EventListener.h"
+#include "EventManager.h"
+
 #include <iostream>
 #include "P_Node.h"
 #include "Picture.h"
@@ -35,6 +37,7 @@ public:
 
 
 protected:
+    EventManager* pMgr;
 
     class MyListener: public EventListener {
     public:
