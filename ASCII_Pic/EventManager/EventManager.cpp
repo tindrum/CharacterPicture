@@ -56,7 +56,7 @@ void EventManager::run() {
             }   else {
                 cout << "no-op\n";
             }
-        cout << eventCode;
+        // cout << eventCode;
     }
     cout << "quit pressed\n\n\n";
 }
