@@ -44,7 +44,11 @@ void HScrollbar::onEvent(int event){
 }
 
 void HScrollbar::display(ostream &os, int row, int wd) const {
-    os << "|<- scroll bar ->|\n";
+    os << "<-";
+    for (int i = 0; i < (_contentWindow.width() -4); i++) {
+        os << "#";
+    }
+    os << "->";
 
 }
 
