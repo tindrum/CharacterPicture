@@ -188,8 +188,8 @@ int main(int argc, char * argv[])
             cout << fed;
             const Picture &hfed = ed | fed;
             cout << hfed;
-            //const Picture &sed = addScrollbar(ed);
-            //cout << sed;
+            const Picture &sed = addScrollbar(ed);
+            cout << sed;
         }   else {
             // passed a file
         }

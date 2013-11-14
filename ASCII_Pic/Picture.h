@@ -18,6 +18,7 @@ class Picture;
 
 Picture frame(const Picture& pic);
 Picture reframe(const Picture&, char, char, char);
+Picture addScrollbar(const Picture& contentArea); // TODO: HScrollbar
 
 class Picture{
 public:
