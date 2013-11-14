@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ade78ac8-01fa-4c19-88e6-dc27e49b6a2b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASCII_Pic/HScrollbar.cpp" afterPath="$PROJECT_DIR$/ASCII_Pic/HScrollbar.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASCII_Pic/main.cpp" afterPath="$PROJECT_DIR$/ASCII_Pic/main.cpp" />
     </list>
     <ignored path="ASCII_Pic.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,28 +31,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="P_Node.h" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ASCII_Pic/P_Node.h">
+          <file leaf-file-name="HCat_Pic.h" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ASCII_Pic/HCat_Pic.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="27" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="765">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Frame_Pic.cpp" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/ASCII_Pic/Frame_Pic.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="56" column="16" selection-start="1184" selection-end="1184" vertical-scroll-proportion="2.995122" vertical-offset="226" max-vertical-offset="990">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Frame_Pic.h" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ASCII_Pic/Frame_Pic.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="42" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="780">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="675">
                   <folding />
                 </state>
               </provider>
@@ -67,10 +49,28 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="HCat_Pic.h" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ASCII_Pic/HCat_Pic.h">
+          <file leaf-file-name="Frame_Pic.h" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ASCII_Pic/Frame_Pic.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="675">
+                <state line="42" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="780">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Frame_Pic.cpp" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/ASCII_Pic/Frame_Pic.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="56" column="16" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.797023" vertical-offset="236" max-vertical-offset="975">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="P_Node.h" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ASCII_Pic/P_Node.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="27" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="765">
                   <folding />
                 </state>
               </provider>
@@ -80,10 +80,28 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="main.cpp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ASCII_Pic/main.cpp">
+          <file leaf-file-name="Picture.cpp" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/ASCII_Pic/Picture.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="75" column="0" selection-start="3188" selection-end="3188" vertical-scroll-proportion="0.0" vertical-offset="965" max-vertical-offset="3165">
+                <state line="117" column="0" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.18132612" vertical-offset="1351" max-vertical-offset="2115">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="HScrollbar.cpp" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ASCII_Pic/HScrollbar.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="58" column="0" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.0" vertical-offset="123" max-vertical-offset="900">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="HScrollbar.h" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ASCII_Pic/HScrollbar.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
                   <folding />
                 </state>
               </provider>
@@ -98,30 +116,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="HScrollbar.h" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ASCII_Pic/HScrollbar.h">
+          <file leaf-file-name="main.cpp" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ASCII_Pic/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-                  <folding>
-                    <element signature="e#164#190#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="HScrollbar.cpp" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/ASCII_Pic/HScrollbar.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="58" column="0" selection-start="1278" selection-end="1278" vertical-scroll-proportion="3.1658537" vertical-offset="161" max-vertical-offset="900">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Picture.cpp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ASCII_Pic/Picture.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="117" column="0" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.0" vertical-offset="1621" max-vertical-offset="2385">
+                <state line="75" column="0" selection-start="3188" selection-end="3188" vertical-scroll-proportion="0.0" vertical-offset="2291" max-vertical-offset="3030">
                   <folding />
                 </state>
               </provider>
@@ -248,7 +246,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -281,19 +278,20 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.keymap" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/ASCII_Pic/HScrollbar.h" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="ASCII_Pic" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.strings after getopt">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="ASCII_Pic" TARGET_NAME="ASCII_Pic" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="ASCII_Pic" RUN_TARGET_NAME="ASCII_Pic" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -378,13 +376,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29358974" sideWeight="0.49964765" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="FLOATING" visible="false" weight="0.24911785" sideWeight="0.58096826" order="1" side_tool="false" content_ui="tabs" x="4091" y="177" width="492" height="745" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1425547" sideWeight="0.31538463" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1425547" sideWeight="0.31538463" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43683085" sideWeight="0.4474359" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24665257" sideWeight="0.4642857" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41979167" sideWeight="0.28823113" order="9" side_tool="true" content_ui="tabs" />
@@ -394,6 +391,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29358974" sideWeight="0.49964765" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -413,9 +411,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="FLOATING" visible="false" weight="0.24911785" sideWeight="0.58096826" order="1" side_tool="false" content_ui="tabs" x="4091" y="177" width="492" height="745" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14293249" sideWeight="0.6177083" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38229167" sideWeight="0.535461" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -498,13 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ASCII_Pic/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="3188" selection-end="3188" vertical-scroll-proportion="0.0" vertical-offset="965" max-vertical-offset="3165">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ASCII_Pic/Picture.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="64" selection-start="949" selection-end="949" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="1005">
@@ -528,7 +519,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ASCII_Pic/Frame_Pic.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="16" selection-start="1184" selection-end="1184" vertical-scroll-proportion="2.995122" vertical-offset="226" max-vertical-offset="990">
+        <state line="56" column="16" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.797023" vertical-offset="236" max-vertical-offset="975">
           <folding />
         </state>
       </provider>
@@ -536,22 +527,27 @@
     <entry file="file://$PROJECT_DIR$/ASCII_Pic/HScrollbar.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
-          <folding>
-            <element signature="e#164#190#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ASCII_Pic/Picture.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="0" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.0" vertical-offset="1621" max-vertical-offset="2385">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ASCII_Pic/HScrollbar.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="1278" selection-end="1278" vertical-scroll-proportion="3.1658537" vertical-offset="161" max-vertical-offset="900">
+        <state line="58" column="0" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.0" vertical-offset="123" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ASCII_Pic/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="0" selection-start="3188" selection-end="3188" vertical-scroll-proportion="0.0" vertical-offset="965" max-vertical-offset="3165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ASCII_Pic/Picture.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="0" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.18132612" vertical-offset="1351" max-vertical-offset="2115">
           <folding />
         </state>
       </provider>
