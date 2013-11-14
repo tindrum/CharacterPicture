@@ -184,10 +184,6 @@ int main(int argc, char * argv[])
         if (svalue ) {      // passed a string on the command line
             const Picture &ed = Picture( svalue );
             cout << ed;
-            const Picture &fed = frame(ed);
-            cout << fed;
-            const Picture &hfed = ed | fed;
-            cout << hfed;
             const Picture &sed = addScrollbar(ed);
             cout << sed;
         }   else {

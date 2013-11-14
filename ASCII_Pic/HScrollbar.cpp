@@ -44,7 +44,7 @@ void HScrollbar::onEvent(int event){
 }
 
 void HScrollbar::display(ostream &os, int row, int wd) const {
-    cout << "|<- scroll bar ->|\n";
+    os << "|<- scroll bar ->|\n";
 
 }
 
