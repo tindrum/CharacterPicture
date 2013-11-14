@@ -1,5 +1,5 @@
 //
-// Created by Ed on 11/11/13.
+//  By Daniel Henderson and Josh Maguregui
 // Copyright (c) 2013 Daniel Henderson. All rights reserved.
 //
 
