@@ -8,15 +8,22 @@
 #include "EventManager.h"
 #include "Picture.h"
 #include <ncurses.h>
+#include <curses.h>
 #include <iostream>
 using namespace std;
+
+const chtype SCRLL = '<';
+const chtype SCRLR = '>';
+
+//const chtype SCRLL = KEY_LEFT;
+//const chtype SCRLR = KEY_RIGHT;
 
 HScrollbar::HScrollbar( const Picture& contWin )
 : P_Node(), _contentWindow(contWin) {
     EventManager* pMgr = EventManager::getManager();
 
-    pMgr->registerForEvent((int)'<', this);  // TODO: get to work with KEY_LEFT
-    pMgr->registerForEvent((int)'>', this);  // TODO: get to work with KEY_RIGHT
+    pMgr->registerForEvent(SCRLL, this);  // TODO: get to work with KEY_LEFT
+    pMgr->registerForEvent(SCRLR, this);  // TODO: get to work with KEY_RIGHT
 
 }
 
@@ -30,15 +37,14 @@ int HScrollbar::width() const {
 }
 
 
-void HScrollbar::onEvent(int event){
-    char eventChar = (char)event;
+void HScrollbar::onEvent(chtype eventChar){
     switch(eventChar) {
-        case '<': // left arrow on keyboard
-       // case KEY_LEFT: // left arrow on keyboard
+       // case '<': // left arrow on keyboard
+       case SCRLL: // left arrow on keyboard
             cout << "scroll left one\n";
             break;
-        case '>':  // right arrow on keyboard
-        // case KEY_RIGHT:  // right arrow on keyboard
+       // case '>':  // right arrow on keyboard
+         case SCRLR:  // right arrow on keyboard
             cout << "scroll right one\n";
             break;
         default:

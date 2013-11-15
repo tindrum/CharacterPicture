@@ -13,7 +13,7 @@
 
 class EventListener {
 public:
-    virtual void onEvent(int event) = 0;
+    virtual void onEvent(chtype event) = 0;
 
 
 
