@@ -8,6 +8,7 @@
 #include <sys/_types.h>
 #include "EventManager.h"
 #include <iostream>
+#include <ncurses.h>
 
 using namespace std;
 
@@ -47,12 +48,14 @@ void EventManager::run() {
     // uses ncurses.h to getch()
     while ( eventCode != 'q' ){
         // read one fricken char from the terminal!
-        // eventNumber = getch();
-        cin >> eventCode;
+        eventCode = getchar();
+        cin >> flush;
+        // cin >> eventCode;
         // cout << "not quit yet\n";
             if (pListeners[eventCode] != NULL) {
                 cout << "Event Handler for " << eventCode << " found.\n";
                 // TODO: execute function at pListeners[eventCode];
+                pListeners[(int)eventCode]->onEvent((int)eventCode);
             }   else {
                 cout << "no-op\n";
             }

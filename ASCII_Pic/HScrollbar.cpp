@@ -31,11 +31,14 @@ int HScrollbar::width() const {
 
 
 void HScrollbar::onEvent(int event){
-    switch(event) {
-        case KEY_LEFT: // left arrow on keyboard
+    char eventChar = (char)event;
+    switch(eventChar) {
+        case '<': // left arrow on keyboard
+       // case KEY_LEFT: // left arrow on keyboard
             cout << "scroll left one\n";
             break;
-        case KEY_RIGHT:  // right arrow on keyboard
+        case '>':  // right arrow on keyboard
+        // case KEY_RIGHT:  // right arrow on keyboard
             cout << "scroll right one\n";
             break;
         default:
