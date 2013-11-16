@@ -109,66 +109,67 @@ int main(int argc, char * argv[])
     int c;
     
     opterr = 0;
-    
+
     while (( c = getopt (argc, argv, "h::w::x::y::s:f:")) != -1 )
         switch (c)
-    {
-        case 'h':
-            if (optarg) {
-                hflag = 1;
-                hvalue = optarg;
-            } else {
-                hflag = 0;
-                // hvalue = "";
-            }
-            break;
-        case 'w':
-            if (optarg) {
-                wflag = 1;
-                wvalue = optarg;
-            } else {
-                wflag = 0;
-                // wvalue = "";
-            }
-            break;
-        case 'x':
-            if (optarg) {
-                xflag = 1;
-                xvalue = optarg;
-            } else {
-                xflag = 0;
-                // xvalue = "";
-            }
-            break;
-        case 'y':
-            if (optarg) {
-                yflag = 1;
-                yvalue = optarg;
-            } else {
-                yflag = 0;
-                // yvalue = "";
-            }
-            break;
-        case 's':
-            svalue = optarg;
-            break;
-        case 'f':
-            fvalue = optarg;
-            break;
+        {
+            case 'h':    // user provided height of visible text
+                if (optarg) {
+                    hflag = 1;
+                    hvalue = optarg;
+                } else {
+                    hflag = 0;
+                    // hvalue = "";
+                }
+                break;
+            case 'w': // user provided width of visible text
+                if (optarg) {
+                    wflag = 1;
+                    wvalue = optarg;
+                } else {
+                    wflag = 0;
+                    // wvalue = "";
+                }
+                break;
+            case 'x':  // user provided x-offset (horizontal) of visible text from left
+                if (optarg) {
+                    xflag = 1;
+                    xvalue = optarg;
+                } else {
+                    xflag = 0;
+                    // xvalue = "";
+                }
+                break;
+            case 'y': // user provided y-offset (vertical) of visible text from top
+                if (optarg) {
+                    yflag = 1;
+                    yvalue = optarg;
+                } else {
+                    yflag = 0;
+                    // yvalue = "";
+                }
+                break;
+            case 's': // user provided string
+                svalue = optarg;
+                break;
+            case 'f': // user provided file path
+                fvalue = optarg;
+                break;
             case '?':
-            if (optopt == 's')
-                fprintf(stderr, "Option -%c requires an argument.\n", optopt);
-            else if (optopt == 'f')
-                fprintf(stderr, "Option -%c requires an argument.\n", optopt);
-            else if (isprint(optopt))
-                fprintf(stderr, "Unknown option `-%c'.\n", optopt);
-            else
-                fprintf(stderr, "Unknown option character `\\x%x'.\n", optopt);
-            return 1;
-        default:
-            abort ();
-    }
+                if (optopt == 's')
+                    fprintf(stderr, "Option -%c requires an argument.\n", optopt);
+                else if (optopt == 'f')
+                    fprintf(stderr, "Option -%c requires an argument.\n", optopt);
+                else if (isprint(optopt))
+                    fprintf(stderr, "Unknown option `-%c'.\n", optopt);
+                else
+                    fprintf(stderr, "Unknown option character `\\x%x'.\n", optopt);
+                return 1;
+            default:
+                abort ();
+        }
     // end getopt parsing section
+    cout << "argc is now: " << argc << endl;
     
 /*      // Example of dynamic string
     int mylen = strlen(argv[0]);

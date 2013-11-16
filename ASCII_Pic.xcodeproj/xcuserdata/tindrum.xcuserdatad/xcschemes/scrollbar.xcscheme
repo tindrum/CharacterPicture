@@ -59,7 +59,11 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-s &quot;Hello There-World Domination-Love your hair-Hate what you&apos;ve done with the place-&quot;"
+            argument = "-s"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;Hello There-World Domination-Love your hair-Hate what you&apos;ve done with the place-&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
