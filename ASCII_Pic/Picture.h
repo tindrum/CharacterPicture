@@ -16,9 +16,9 @@ class P_Node;
 
 class Picture;
 
-Picture frame(const Picture& pic);
-Picture reframe(const Picture&, char, char, char);
-Picture addScrollbar(const Picture& contentArea); // TODO: HScrollbar
+//Picture frame(const Picture& pic);
+//Picture reframe(const Picture&, char, char, char);
+//Picture addScrollbar(const Picture& contentArea); // TODO: HScrollbar
 
 class Picture{
 public:
