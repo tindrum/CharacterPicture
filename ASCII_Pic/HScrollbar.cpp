@@ -14,9 +14,10 @@ using namespace std;
 
 const chtype SCRLL = '<';
 const chtype SCRLR = '>';
-
+const chtype IPUSH = 'i';
 //const chtype SCRLL = KEY_LEFT;
 //const chtype SCRLR = KEY_RIGHT;
+
 
 HScrollbar::HScrollbar( const Picture& contWin )
 : P_Node(), _contentWindow(contWin) {
@@ -24,6 +25,7 @@ HScrollbar::HScrollbar( const Picture& contWin )
 
     pMgr->registerForEvent(SCRLL, this);  // TODO: get to work with KEY_LEFT
     pMgr->registerForEvent(SCRLR, this);  // TODO: get to work with KEY_RIGHT
+    pMgr->registerForEvent(IPUSH, this);
 
 }
 
@@ -43,9 +45,13 @@ void HScrollbar::onEvent(chtype eventChar){
        case SCRLL: // left arrow on keyboard
             cout << "scroll left one\n";
             break;
-       // case '>':  // right arrow on keyboard
-         case SCRLR:  // right arrow on keyboard
+            // case '>':  // right arrow on keyboard
+        case SCRLR:  // right arrow on keyboard
             cout << "scroll right one\n";
+            break;
+            // case '>':  // right arrow on keyboard
+        case IPUSH:  // right arrow on keyboard
+            cout << "\ni\n";
             break;
         default:
             break;
