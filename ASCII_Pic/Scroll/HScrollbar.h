@@ -22,15 +22,18 @@
 class HScrollbar : public P_Node, public EventListener {
 private:
     friend class Picture;
-    friend Picture addScrollbar( const Picture& contentWindow );
+    friend class ScrollContainer;
+
+    friend Picture addHScrollbar( const Picture& scrollContainer );
 
     int height() const;
     int width() const;
     void display(ostream& os, int row, int wd) const;
     Picture reframe(char c, char s, char t); //
 
-    friend Picture operator&(const Picture& contentWindow);
-    HScrollbar(const Picture& contentWindow);
+    friend Picture operator&(const Picture& scrollContainer);
+    HScrollbar(const Picture& scrollContainer);
+    HScrollbar( const Picture& scrollWin, int winHeight, int winWidth, int winXoffset, int winYoffset  );
 
 public:
     Picture* getPic();
@@ -48,10 +51,9 @@ protected:
 
     void onEvent(wchar_t event);
 private:
-    Picture _contentWindow;
-    // this is a "has-a" reference to the String_Pic that this decorator scrolls
-    // this class only decorates a String_Pic object, or a class that has a grid of characters that
-    // acts just like a String_Pic object (perhaps a mini-spreadsheet or ASCII-Art picture of Snoopy)
+    Picture _scrollContainer;
+    // this is a "has-a" reference to a ScrollContainer that this decorator scrolls
+    // this class only decorates a ScrollContainer object
 };
 
 

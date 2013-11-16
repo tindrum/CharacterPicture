@@ -115,7 +115,7 @@ Picture reframe(const Picture& pic, char c, char s, char t){
 }
 
 // TODO: HScrollbar
-Picture addScrollbar(const Picture& pic){
+Picture addHScrollbar(const Picture& pic){
     return new HScrollbar(pic._pnode);
 }
 

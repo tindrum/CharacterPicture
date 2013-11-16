@@ -5,11 +5,13 @@
 
 
 #include "HScrollbar.h"
+#include "ScrollContainer.h"
 #include "EventManager.h"
 #include "Picture.h"
 #include <ncurses.h>
 #include <curses.h>
 #include <iostream>
+#include <string>
 using namespace std;
 
 const wchar_t SCRLL = '<';
@@ -20,23 +22,57 @@ const wchar_t IPUSH = 'i';
 //const wchar_t SCRLR = KEY_RIGHT;
 
 
-HScrollbar::HScrollbar( const Picture& contWin )
-: P_Node(), _contentWindow(contWin) {
+HScrollbar::HScrollbar( const Picture& scrollWin  )
+: P_Node(), _scrollContainer( scrollWin ) {
+    if ( strncmp( typeid(_scrollContainer).name(), "ScrollContainer", 16) ) {
+        // already points to the right kind of object
+    }   else {
+        Picture& tempWin = _scrollContainer;
+        _scrollContainer = new ScrollContainer( _scrollContainer );
+
+    }
     EventManager* pMgr = EventManager::getManager();
 
     pMgr->registerForEvent(SCRLL, this);  // TODO: get to work with KEY_LEFT
     pMgr->registerForEvent(SCRLR, this);  // TODO: get to work with KEY_RIGHT
     pMgr->registerForEvent(IPUSH, this);
 
+    static_cast<ScrollContainer>(_scrollContainer).setH(_scrollContainer.height());
+    static_cast<ScrollContainer>(_scrollContainer).setW(_scrollContainer.width());
+    static_cast<ScrollContainer>(_scrollContainer).setX(0);
+    static_cast<ScrollContainer>(_scrollContainer).setY(0);
+
+}
+
+HScrollbar::HScrollbar( const Picture& scrollWin, int winHeight, int winWidth, int winXoffset, int winYoffset  )
+: P_Node(), _scrollContainer( scrollWin ) {
+    if ( typeid(_scrollContainer).name() == "ScrollContainer" ) {
+        // already points to the right kind of object
+    }   else {
+        Picture& tempWin = _scrollContainer;
+        _scrollContainer = new ScrollContainer( _scrollContainer );
+
+    }
+    EventManager* pMgr = EventManager::getManager();
+
+    pMgr->registerForEvent(SCRLL, this);  // TODO: get to work with KEY_LEFT
+    pMgr->registerForEvent(SCRLR, this);  // TODO: get to work with KEY_RIGHT
+    pMgr->registerForEvent(IPUSH, this);
+
+    static_cast<ScrollContainer>(_scrollContainer).setH(winHeight);
+    static_cast<ScrollContainer>(_scrollContainer).setW(winWidth);
+    static_cast<ScrollContainer>(_scrollContainer).setX(winXoffset);
+    static_cast<ScrollContainer>(_scrollContainer).setY(winYoffset);
+
 }
 
 int HScrollbar::height() const {
-    return _contentWindow.height() + 2;
+    return _scrollContainer.height() + 2;
     // TODO: remove border from top of scrollbar pane and return 2 instead
 }
 
 int HScrollbar::width() const {
-    return ( _contentWindow.width() );
+    return ( _scrollContainer.width() );
 }
 
 
@@ -60,18 +96,18 @@ void HScrollbar::onEvent(wchar_t eventChar){
 }
 
 void HScrollbar::display(ostream &os, int row, int wd) const {
-    if (row <= _contentWindow.height()) {
-        _contentWindow.display(os, row, wd);
-    } else if ( row > ( _contentWindow.height()   ))
+    if (row <= _scrollContainer.height()) {
+        _scrollContainer.display(os, row, wd);
+    } else if ( row > ( _scrollContainer.height()   ))
     {
-         if ( row == _contentWindow.height() +0 ) // TODO: draw plain dashed line AND <-HASH-> line
+         if ( row == _scrollContainer.height() +0 ) // TODO: draw plain dashed line AND <-HASH-> line
         {
-            for (int i = 0; i < (_contentWindow.width()); i++) {
+            for (int i = 0; i < (_scrollContainer.width()); i++) {
                 os << "-";
             }
-        } else if ( row == _contentWindow.height() +1 ) {
+        } else if ( row == _scrollContainer.height() +1 ) {
             os << "<-";
-            for (int i = 0; i < (_contentWindow.width() -4); i++) {
+            for (int i = 0; i < (_scrollContainer.width() -4); i++) {
                 os << "#";
             }
             os << "->";
@@ -93,10 +129,10 @@ void HScrollbar::display(ostream &os, int row, int wd) const {
 
 
 Picture* HScrollbar::getPic() {
-    return &_contentWindow;
+    return &_scrollContainer;
 }
 
 Picture HScrollbar::reframe(char c, char s, char t) {
-    return new HScrollbar( ::reframe( _contentWindow, c, s, t));
+    return new HScrollbar( ::reframe( _scrollContainer, c, s, t));
 }
 

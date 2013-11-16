@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "Picture.h"
+#include <typeinfo>
 using namespace std;
 
 class P_Node{
@@ -33,7 +34,7 @@ protected:
 public:
     void showDebug() const;
     virtual Picture* getPic() = 0;
-    
+
 private:
     friend class Picture;
     friend class String_Pic;

@@ -49,7 +49,7 @@ const char* knkv[] = { "Fidling", "with a program", "until it appears to work", 
 
 void manyObjects() {
         const Picture &pic = Picture(init, 3);
-        const Picture &HSpic = addScrollbar(pic);
+        const Picture &HSpic = addHScrollbar(pic);
         cout << HSpic;
         const Picture &fpic = frame(pic);
 
@@ -83,7 +83,7 @@ void manyObjects() {
         const Picture &ftblr_paris = ftblr & re_fpic;
         const Picture &f_ftblr_paris = frame(ftblr_paris);
         cout << f_ftblr_paris << endl;
-        const Picture &HS_f_ftblr_paris = addScrollbar(f_ftblr_paris);
+        const Picture &HS_f_ftblr_paris = addHScrollbar(f_ftblr_paris);
         cout << HS_f_ftblr_paris;
 
     }
@@ -188,7 +188,7 @@ int main(int argc, char * argv[])
         if (svalue ) {      // passed a string on the command line
             const Picture &ed = Picture( svalue );
             cout << ed;
-            const Picture &sed = addScrollbar(ed);
+            const Picture &sed = addHScrollbar(ed);
             cout << sed;
             const Picture &fsed = frame(sed);
             cout << fsed;
