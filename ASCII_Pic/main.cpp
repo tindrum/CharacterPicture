@@ -42,6 +42,11 @@
 #include <iostream>
 #include <unistd.h>
 
+#define HWIN 5;
+#define WWIN 3;
+#define XWIN 0;
+#define YWIN 0;
+
 using namespace std;
 
 const char* init[] = { "Paris", "in the", "Spring" };
@@ -51,7 +56,7 @@ const char* knkv[] = { "Fidling", "with a program", "until it appears to work", 
 void manyObjects() {
         const Picture &pic = Picture(init, 3);
         const Picture &HSpic = addScrollbar(pic);
-        cout << HSpic;
+//        cout << HSpic;
         const Picture &fpic = frame(pic);
 
         Picture rke(knkv, 6);
@@ -60,30 +65,31 @@ void manyObjects() {
         Picture qjd(joju, 4);
         const Picture &fqjd = frame(qjd);
 
-        cout << fpic << endl;
+//        cout << fpic << endl;
+
         const Picture &re_fpic = reframe(fpic, 'o', '!', '~');
         cout << re_fpic << endl;
 
-        cout << fqjd << endl;
+//        cout << fqjd << endl;
         const Picture &re_fqjd = reframe(fqjd, '$', '@', '=');
-        cout << re_fqjd << endl;
+//        cout << re_fqjd << endl;
 
-        cout << frke << endl;
+//        cout << frke << endl;
 
         const Picture &left_right = re_fpic | re_fqjd;
 
         const Picture &top_bottom = frke & re_fqjd;
-        cout << top_bottom << endl;
+//        cout << top_bottom << endl;
 
         const Picture &tblr = top_bottom | left_right;
-        cout << tblr << endl;
+//        cout << tblr << endl;
 
         const Picture &ftblr = frame(tblr);
-        cout << ftblr << endl;
+//        cout << ftblr << endl;
 
         const Picture &ftblr_paris = ftblr & re_fpic;
         const Picture &f_ftblr_paris = frame(ftblr_paris);
-        cout << f_ftblr_paris << endl;
+//        cout << f_ftblr_paris << endl;
         const Picture &HS_f_ftblr_paris = addScrollbar(f_ftblr_paris);
         cout << HS_f_ftblr_paris;
 
@@ -110,10 +116,10 @@ int main(int argc, char * argv[])
     int c;
 
     // window size and offset numbers
-    int hwin = 5;  // default width
-    int wwin = 2;  // default height
-    int xwin = 0;  // default x-offset
-    int ywin = 0;  // default y-offset
+    int hwin = HWIN;  // default width
+    int wwin = WWIN;  // default height
+    int xwin = XWIN;  // default x-offset
+    int ywin = YWIN;  // default y-offset
     
     opterr = 0;
     int parsedArgCount = 0;
@@ -125,38 +131,41 @@ int main(int argc, char * argv[])
         switch (c)
         {
             case 'h':    // user provided height of visible text
-                hflag = 1;
                 if (optarg) {
-                    hwin = atoi(optarg);
+                    hflag = 1;
+                    hvalue = optarg;
+                    hwin = atoi(hvalue);
                 } else {
-                    // hvalue = "";
+                    hflag = 1;
+                   hwin = HWIN;
                 }
                 break;
             case 'w': // user provided width of visible text
-                wflag = 1;
                 if (optarg) {
-                    wwin = atoi(optarg);
+                    wflag = 1;
+                    wvalue = optarg;
+                    wwin = atoi(wvalue);
                 } else {
-                    wflag = 0;
-                    // wvalue = "";
+                    wflag = 1;
+                    wwin = WWIN;
                 }
                 break;
             case 'x':  // user provided x-offset (horizontal) of visible text from left
-                xflag = 1;
                 if (optarg) {
-                    xwin = atoi(optarg);
+                    xflag = 1;
+                    xvalue = optarg;
+                    xwin = atoi(xvalue);
                 } else {
-                    // xflag = 0;
-                    // xvalue = "";
+                    xflag = 1;
                 }
                 break;
             case 'y': // user provided y-offset (vertical) of visible text from top
-                yflag = 1;
                 if (optarg) {
-                    ywin = atoi(optarg);
+                    yflag = 1;
+                    yvalue = optarg;
+                    ywin = atoi(yvalue);
                 } else {
-                    // yflag = 0;
-                    // yvalue = "";
+                    yflag = 1;
                 }
                 break;
             case 's': // user provided string
@@ -181,6 +190,13 @@ int main(int argc, char * argv[])
     } // end getopt parsing section
     cout << "argc is now: " << argc << endl;
     cout << "parsedArgCount is now: " << parsedArgCount << endl;
+    cout << "optarg is now: " << optarg << endl;
+    cout << "optopt is now: " << optopt << endl;
+    cout << "optind is now: " << optind << endl;
+    cout << " * almost done parsing\n";
+
+
+
 
 /*      // Example of dynamic string
     int mylen = strlen(argv[0]);
