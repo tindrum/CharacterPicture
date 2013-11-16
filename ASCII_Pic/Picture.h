@@ -46,6 +46,7 @@ private:
     friend class HCat_Pic;
     friend class VCat_Pic;
     friend class HScrollbar; // TODO: HScrollbar
+    friend class VScrollbar; // TODO: VScrollbar
     
     int height() const;
     int width() const;

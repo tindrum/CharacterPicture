@@ -13,6 +13,8 @@
 #include "P_Node.h"
 #include "HScrollbar.h" // TODO: HScrollbar
 #include "VCat_Pic.h"
+#include "VScrollbar.h" // TODO: VScrollbar
+#include "HCat_Pic.h"
 #include <iostream>
 #include <regex>
 #include <regex.h>
