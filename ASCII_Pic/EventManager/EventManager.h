@@ -6,7 +6,10 @@
 
 
 #include "EventListener.h"
-#include <curses.h>
+#include <ncurses.h>
+#include <iostream>
+#include <string>
+
 
 
 #ifndef __EventManager_H_
@@ -17,15 +20,16 @@ class EventManager {
 public:
     static EventManager* getManager();
 
-    void registerForEvent(int event, EventListener* pL);
+    void registerForEvent(wchar_t event, EventListener* pL);
     void run();
 
 private:
     EventManager();
     ~EventManager();
 
-    EventListener* pListeners[8];
+    EventListener* pListeners[KEY_MAX];
     static EventManager* _pManager;
+    wchar_t bigEvent;
 
 };
 

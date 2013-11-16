@@ -28,7 +28,6 @@
 #include <regex>
 
 
-
 using namespace std;
 
 Picture::Picture(P_Node* pnode) : _pnode(pnode){
