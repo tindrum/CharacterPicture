@@ -37,6 +37,7 @@
 #include "HCat_Pic.h"
 #include "EventManager.h"
 #include "HScrollbar.h"
+#include <stdlib.h> // atoi
 
 #include <iostream>
 #include <unistd.h>
@@ -107,45 +108,54 @@ int main(int argc, char * argv[])
     char *fvalue = NULL;
     int index;
     int c;
+
+    // window size and offset numbers
+    int hwin = 5;  // default width
+    int wwin = 2;  // default height
+    int xwin = 0;  // default x-offset
+    int ywin = 0;  // default y-offset
     
     opterr = 0;
+    int parsedArgCount = 0;
 
     while (( c = getopt (argc, argv, "h::w::x::y::s:f:")) != -1 )
+    {
+        parsedArgCount++;
+        // TODO: clean up duplicate variables
         switch (c)
         {
             case 'h':    // user provided height of visible text
+                hflag = 1;
                 if (optarg) {
-                    hflag = 1;
-                    hvalue = optarg;
+                    hwin = atoi(optarg);
                 } else {
-                    hflag = 0;
                     // hvalue = "";
                 }
                 break;
             case 'w': // user provided width of visible text
+                wflag = 1;
                 if (optarg) {
-                    wflag = 1;
-                    wvalue = optarg;
+                    wwin = atoi(optarg);
                 } else {
                     wflag = 0;
                     // wvalue = "";
                 }
                 break;
             case 'x':  // user provided x-offset (horizontal) of visible text from left
+                xflag = 1;
                 if (optarg) {
-                    xflag = 1;
-                    xvalue = optarg;
+                    xwin = atoi(optarg);
                 } else {
-                    xflag = 0;
+                    // xflag = 0;
                     // xvalue = "";
                 }
                 break;
             case 'y': // user provided y-offset (vertical) of visible text from top
+                yflag = 1;
                 if (optarg) {
-                    yflag = 1;
-                    yvalue = optarg;
+                    ywin = atoi(optarg);
                 } else {
-                    yflag = 0;
+                    // yflag = 0;
                     // yvalue = "";
                 }
                 break;
@@ -168,9 +178,10 @@ int main(int argc, char * argv[])
             default:
                 abort ();
         }
-    // end getopt parsing section
+    } // end getopt parsing section
     cout << "argc is now: " << argc << endl;
-    
+    cout << "parsedArgCount is now: " << parsedArgCount << endl;
+
 /*      // Example of dynamic string
     int mylen = strlen(argv[0]);
     char * astring = char[100]; // This will go out of scope later.. if it's in a function.
