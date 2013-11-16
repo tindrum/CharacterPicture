@@ -42,11 +42,11 @@ protected:
     class MyListener: public EventListener {
     public:
         MyListener(HScrollbar* pSB) { _psb = pSB; };
-        void onEvent(chtype e) { _psb->onEvent(e); }
+        void onEvent(wchar_t e) { _psb->onEvent(e); }
         HScrollbar* _psb;
     };
 
-    void onEvent(chtype event);
+    void onEvent(wchar_t event);
 private:
     Picture _contentWindow;
     // this is a "has-a" reference to the String_Pic that this decorator scrolls

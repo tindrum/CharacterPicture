@@ -12,11 +12,12 @@
 #include <iostream>
 using namespace std;
 
-const chtype SCRLL = '<';
-const chtype SCRLR = '>';
-const chtype IPUSH = 'i';
-//const chtype SCRLL = KEY_LEFT;
-//const chtype SCRLR = KEY_RIGHT;
+const wchar_t SCRLL = '<';
+const wchar_t SCRLR = '>';
+const wchar_t IPUSH = 'i';
+
+//const wchar_t SCRLL = KEY_LEFT;
+//const wchar_t SCRLR = KEY_RIGHT;
 
 
 HScrollbar::HScrollbar( const Picture& contWin )
@@ -39,7 +40,7 @@ int HScrollbar::width() const {
 }
 
 
-void HScrollbar::onEvent(chtype eventChar){
+void HScrollbar::onEvent(wchar_t eventChar){
     switch(eventChar) {
        // case '<': // left arrow on keyboard
        case SCRLL: // left arrow on keyboard

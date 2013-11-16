@@ -26,7 +26,7 @@ EventManager *EventManager::getManager() {
     return EventManager::_pManager;
 }
 
-void EventManager::registerForEvent(chtype event, EventListener *pL) {
+void EventManager::registerForEvent(wchar_t event, EventListener *pL) {
      pListeners[event] = pL;
 }
 
@@ -35,7 +35,7 @@ EventManager::~EventManager() {
 }
 
 EventManager::EventManager() {
-    for (chtype i = 0; i < (KEY_MAX); i++){
+    for (wchar_t i = 0; i < (KEY_MAX); i++){
         pListeners[i] = NULL;
     }
 
@@ -43,7 +43,7 @@ EventManager::EventManager() {
 
 void EventManager::run() {
     struct termios old_tio, new_tio;
-    chtype c;
+    wchar_t c;
     // bigEvent = c;
     // get terminal settings for stdin
     tcgetattr(STDIN_FILENO, &old_tio);
@@ -57,8 +57,11 @@ void EventManager::run() {
     // set the new settings immediately
     tcsetattr(STDIN_FILENO,TCSANOW,&new_tio);
 
+    //initscr();
+    //keypad(stdscr, true);
+
     do {
-        c=getchar();
+        c= getchar();
         if (pListeners[c] != NULL) {
          pListeners[c]->onEvent(c);
         }

@@ -20,7 +20,7 @@ class EventManager {
 public:
     static EventManager* getManager();
 
-    void registerForEvent(chtype event, EventListener* pL);
+    void registerForEvent(wchar_t event, EventListener* pL);
     void run();
 
 private:
@@ -29,7 +29,7 @@ private:
 
     EventListener* pListeners[KEY_MAX];
     static EventManager* _pManager;
-    chtype bigEvent;
+    wchar_t bigEvent;
 
 };
 
