@@ -1,5 +1,5 @@
 //
-// Created by Ed on 11/11/13.
+//  By Daniel Henderson and Josh Maguregui
 // Copyright (c) 2013 Daniel Henderson. All rights reserved.
 //
 
@@ -21,7 +21,7 @@ HScrollbar::HScrollbar( const Picture& contWin )
 }
 
 int HScrollbar::height() const {
-    return 3;
+    return _contentWindow.height() + 2;
     // TODO: remove border from top of scrollbar pane and return 2 instead
 }
 
@@ -44,8 +44,21 @@ void HScrollbar::onEvent(int event){
 }
 
 void HScrollbar::display(ostream &os, int row, int wd) const {
-    cout << "|<- scroll bar ->|\n";
-
+    if (row <= _contentWindow.height()) {
+        _contentWindow.display(os, row, wd);
+    } else if ( row == ( _contentWindow.height()   )) {
+        for (int i = 0; i < (_contentWindow.width()); i++) {
+            os << "-";
+        }
+    } else if ( row == _contentWindow.height() +1 ) {
+    os << "<-";
+    for (int i = 0; i < (_contentWindow.width() -4); i++) {
+        os << "#";
+    }
+    os << "->";
+    } else {
+        cerr << "printing past bottom of object. HScrollbar class.\n";
+    }
 }
 
 Picture* HScrollbar::getPic() {
