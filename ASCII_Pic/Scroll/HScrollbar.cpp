@@ -16,9 +16,6 @@ const wchar_t SCRLL = '<';
 const wchar_t SCRLR = '>';
 const wchar_t IPUSH = 'i';
 
-//const wchar_t SCRLL = KEY_LEFT;
-//const wchar_t SCRLR = KEY_RIGHT;
-
 
 HScrollbar::HScrollbar( const Picture& contWin )
 : P_Node(), _contentWindow(contWin) {

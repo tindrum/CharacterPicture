@@ -6,3 +6,5 @@ ASCII_Pic/ASCII_Pic.1
 #*.xcscheme
 *.pdf
 *.timemachine.supported
+*.graffle
+Terminal_Save_Output.txt
